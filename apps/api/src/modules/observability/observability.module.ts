@@ -1,0 +1,1 @@
+import { Module } from '@nestjs/common'; import { ObservabilityController } from './observability.controller'; import { RedisModule } from '../redis/redis.module'; import { DatabaseModule } from '../../database/database.module'; @Module({imports:[RedisModule,DatabaseModule],controllers:[ObservabilityController]}) export class ObservabilityModule {}

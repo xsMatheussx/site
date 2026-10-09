@@ -1,0 +1,2 @@
+import { INestApplication } from '@nestjs/common'; import { Test } from '@nestjs/testing'; import request from 'supertest'; import { AppModule } from '../src/app.module';
+describe('TZ API health (e2e)',()=>{let app:INestApplication; beforeAll(async()=>{const m=await Test.createTestingModule({imports:[AppModule]}).compile(); app=m.createNestApplication(); await app.init();}); afterAll(()=>app?.close()); it('GET /api/v1/health',()=>request(app.getHttpServer()).get('/api/v1/health').expect(200));});

@@ -1,0 +1,250 @@
+:root {
+  --tz-bg: #0d0b0b;
+  --tz-bg-2: #121011;
+  --tz-surface: #171415;
+  --tz-surface-2: #1d1819;
+  --tz-surface-3: #261f20;
+  --tz-line: rgba(255,255,255,.075);
+  --tz-line-strong: rgba(255,255,255,.13);
+  --tz-text: #f6f1eb;
+  --tz-text-soft: #d6cec7;
+  --tz-muted: #938b86;
+  --tz-muted-2: #6c6662;
+  --tz-burgundy: #7f2637;
+  --tz-burgundy-2: #a43f52;
+  --tz-copper: #d2aa7a;
+  --tz-copper-2: #b77f55;
+  --tz-green: #44d279;
+  --tz-shadow: 0 26px 80px rgba(0,0,0,.34);
+}
+
+html {
+  background: var(--tz-bg) !important;
+  color-scheme: dark !important;
+  scrollbar-width: none !important;
+  overflow-x: clip !important;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+body {
+  margin: 0 !important;
+  min-width: 320px !important;
+  background:
+    radial-gradient(circle at 78% -8%, rgba(127,38,55,.12), transparent 28%),
+    radial-gradient(circle at 12% 18%, rgba(210,170,122,.045), transparent 25%),
+    var(--tz-bg) !important;
+  color: var(--tz-text) !important;
+  overflow-x: clip !important;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+img { max-width: 100%; }
+
+button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+
+/* Remove the old transition strip that produced the visible side bar. */
+.page-transition {
+  min-height: 100vh !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  transform: none !important;
+  overflow-x: clip !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* One TZ brand mark everywhere. */
+.tz-global-logo,
+.logoMark,
+.brandMark,
+.productMark,
+.emptyLogo .logoMark,
+.cardBadge .logoMark,
+.dashboard-avatar,
+.dashboard-sidebar-top .tz-global-logo,
+.dashboard-top-actions .dashboard-avatar {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  overflow: hidden !important;
+  background: #181010 url('/tz-master-mark.svg') center / cover no-repeat !important;
+  border: 1px solid rgba(210,170,122,.22) !important;
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.30),
+    inset 0 1px 0 rgba(255,255,255,.08) !important;
+}
+
+.tz-global-logo span,
+.logoMark span,
+.brandMark span,
+.cardBadge .logoMark span,
+.tz-global-logo::before,
+.tz-global-logo::after { display: none !important; }
+
+/* Premium depth for cards and surfaces. */
+.heroCard,
+.floatingCard,
+.businessCard,
+[class*='card'],
+[class*='stat'],
+[class*='formArea'],
+[class*='summary'],
+[class*='productsTable'],
+[class*='table'] {
+  transform-style: preserve-3d;
+}
+
+.heroCard,
+.floatingCard,
+.businessCard,
+[class*='_card_'],
+[class*='_stat_'] {
+  transition:
+    transform .35s cubic-bezier(.2,.75,.2,1),
+    border-color .25s ease,
+    box-shadow .35s ease,
+    background .35s ease !important;
+}
+
+.heroCard:hover,
+.floatingCard:hover,
+.businessCard:hover,
+[class*='_card_']:hover,
+[class*='_stat_']:hover {
+  transform: perspective(1200px) translateY(-6px) rotateX(1.6deg) rotateY(-1.4deg) !important;
+  border-color: rgba(210,170,122,.20) !important;
+  box-shadow: 0 34px 90px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05) !important;
+}
+
+.businessCard:hover { transform: perspective(1200px) translateY(-8px) rotateX(2deg) rotateY(-2deg) !important; }
+
+.heroCard::after,
+.floatingCard::after,
+.businessCard::after,
+[class*='_card_']::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(120deg, rgba(255,255,255,.08), transparent 32%, transparent 70%, rgba(127,38,55,.08));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.heroCard:hover::after,
+.floatingCard:hover::after,
+.businessCard:hover::after,
+[class*='_card_']:hover::after { opacity: 1; }
+
+/* Make shared dashboard surfaces feel designed, not boilerplate. */
+.dashboard-shell {
+  min-height: 100vh !important;
+  background:
+    radial-gradient(circle at 84% 0%, rgba(127,38,55,.09), transparent 28%),
+    var(--tz-bg) !important;
+}
+
+.dashboard-sidebar {
+  background: linear-gradient(180deg, #151112 0%, #0f0c0d 100%) !important;
+  border-right: 1px solid var(--tz-line) !important;
+  box-shadow: 18px 0 60px rgba(0,0,0,.18) !important;
+}
+
+.dashboard-topbar {
+  background: rgba(13,11,12,.82) !important;
+  border-bottom: 1px solid var(--tz-line) !important;
+  backdrop-filter: blur(20px) saturate(120%);
+}
+
+.dashboard-nav-title {
+  color: #68615e !important;
+}
+
+.dashboard-nav-item {
+  color: #968e89 !important;
+  border: 1px solid transparent !important;
+}
+
+.dashboard-nav-item:hover {
+  color: #f2ece7 !important;
+  background: rgba(255,255,255,.035) !important;
+  border-color: rgba(255,255,255,.05) !important;
+}
+
+.dashboard-nav-item-active {
+  color: #f2d9d1 !important;
+  background: linear-gradient(90deg, rgba(127,38,55,.18), rgba(127,38,55,.05)) !important;
+  border-color: rgba(127,38,55,.20) !important;
+  box-shadow: inset 2px 0 0 var(--tz-burgundy-2), 0 8px 25px rgba(127,38,55,.08) !important;
+}
+
+.dashboard-nav-icon svg,
+.dashboard-search-icon svg,
+.dashboard-icon-button svg {
+  stroke-width: 1.55 !important;
+}
+
+.dashboard-search,
+.dashboard-icon-button,
+.dashboard-profile,
+.dashboard-logout {
+  border-color: var(--tz-line) !important;
+}
+
+.dashboard-search { background: rgba(255,255,255,.025) !important; }
+.dashboard-icon-button { background: rgba(255,255,255,.025) !important; }
+.dashboard-profile:hover,
+.dashboard-logout:hover,
+.dashboard-icon-button:hover { background: rgba(255,255,255,.05) !important; }
+
+/* Shared buttons: warm, restrained, never neon. */
+button[class*='primary'],
+a[class*='primary'],
+button[class*='Primary'],
+a[class*='Primary'] {
+  background: linear-gradient(135deg, var(--tz-copper), #b98558) !important;
+  color: #1a1311 !important;
+  border-color: transparent !important;
+  box-shadow: 0 12px 30px rgba(210,170,122,.12) !important;
+}
+
+button[class*='primary']:hover,
+a[class*='primary']:hover,
+button[class*='Primary']:hover,
+a[class*='Primary']:hover {
+  filter: brightness(1.05);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgba(210,170,122,.45) !important;
+  box-shadow: 0 0 0 3px rgba(210,170,122,.07) !important;
+}
+
+@media (max-width: 760px) {
+  .heroCard:hover,
+  .floatingCard:hover,
+  .businessCard:hover,
+  [class*='_card_']:hover,
+  [class*='_stat_']:hover {
+    transform: translateY(-3px) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.tz-global-logo img { width: 100% !important; height: 100% !important; display: block !important; object-fit: cover !important; }

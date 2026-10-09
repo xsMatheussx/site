@@ -1,0 +1,595 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  PENDING
+}
+
+enum UserRole {
+  BUYER
+  AFFILIATE
+  PRODUCER
+  ADMIN
+}
+
+enum ProductStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ProductType {
+  FILE
+  COURSE
+  CONTENT
+  COMMUNITY
+}
+
+enum OrderStatus {
+  PENDING
+  AWAITING_PAYMENT
+  PAID
+  CANCELED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+  CHARGEBACK
+  CANCELED
+}
+
+enum CommissionStatus {
+  PENDING
+  AVAILABLE
+  PAID
+  CANCELED
+}
+
+enum AffiliateApplicationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum AffiliateLinkStatus {
+  ACTIVE
+  INACTIVE
+}
+
+enum AccessStatus {
+  ACTIVE
+  REVOKED
+}
+
+enum PaymentAccountStatus {
+  PENDING
+  ACTIVE
+  BLOCKED
+  REJECTED
+}
+
+enum RefundStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+enum DisputeStatus {
+  OPEN
+  WON
+  LOST
+  CLOSED
+}
+
+enum FinancialEntryType {
+  SALE
+  COMMISSION
+  REFUND
+  CHARGEBACK
+  FEE
+  ADJUSTMENT
+}
+
+enum ConsentType {
+  TERMS
+  PRIVACY
+  MARKETING
+  COOKIES
+}
+
+model User {
+  id                       String                    @id @default(cuid())
+  email                    String                    @unique
+  passwordHash             String
+  name                     String
+  status                   UserStatus                @default(ACTIVE)
+  roles                    UserRole[]
+  emailVerifiedAt          DateTime?
+  createdAt                DateTime                  @default(now())
+  updatedAt                DateTime                  @updatedAt
+
+  profile                  Profile?
+  paymentAccount           PaymentAccount?
+  products                 Product[]
+  producedSales            Sale[]                    @relation("SaleProducer")
+  affiliate                Affiliate?
+  customers                Customer[]
+  refreshSessions          RefreshSession[]
+  passwordResetTokens      PasswordResetToken[]
+  emailVerificationTokens  EmailVerificationToken[]
+  consents                 Consent[]
+  auditLogs                AuditLog[]
+  notifications            Notification[]
+
+  @@index([email])
+}
+
+model PaymentAccount {
+  id                  String                @id @default(cuid())
+  userId              String                @unique
+  provider             String
+  externalRecipientId String?               @unique
+  status              PaymentAccountStatus @default(PENDING)
+  metadata            Json?
+  createdAt            DateTime              @default(now())
+  updatedAt            DateTime              @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  name      String?
+  bio       String?
+  avatarUrl String?
+  phone     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Product {
+  id          String        @id @default(cuid())
+  producerId  String
+  name        String
+  slug        String        @unique
+  description String?
+  category    String       @default("Outros")
+  coverUrl    String?
+  type        ProductType
+  status      ProductStatus @default(DRAFT)
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  producer          User              @relation(fields: [producerId], references: [id], onDelete: Cascade)
+  files             ProductFile[]
+  offers            Offer[]
+  affiliatePrograms AffiliateProgram[]
+  orders            Order[]
+  course            Course?
+  accesses          Access[]
+  sales             Sale[]
+  affiliateLinks    AffiliateLink[]
+
+  @@index([producerId])
+  @@index([status])
+}
+
+model ProductFile {
+  id         String   @id @default(cuid())
+  productId  String
+  fileName   String
+  storageKey String   @unique
+  mimeType   String?
+  size       Int?
+  createdAt  DateTime @default(now())
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+}
+
+model Offer {
+  id         String   @id @default(cuid())
+  productId  String
+  name       String
+  price      Int
+  startsAt   DateTime?
+  endsAt     DateTime?
+  active     Boolean  @default(true)
+  status     String   @default("ACTIVE")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  orders  Order[]
+
+  @@index([productId])
+}
+
+model Affiliate {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  status    String   @default("ACTIVE")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user         User                  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  applications AffiliateApplication[]
+  links        AffiliateLink[]
+  commissions  Commission[]
+  sales        Sale[]
+}
+
+model AffiliateProgram {
+  id             String   @id @default(cuid())
+  productId      String   @unique
+  commissionType String
+  commissionValue Int
+  active         Boolean  @default(true)
+  enabled        Boolean  @default(true)
+  approvalMode   String   @default("AUTO")
+  rules          String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  product      Product               @relation(fields: [productId], references: [id], onDelete: Cascade)
+  applications AffiliateApplication[]
+  links        AffiliateLink[]
+
+  @@index([productId])
+}
+
+model AffiliateApplication {
+  id                 String                    @id @default(cuid())
+  affiliateId        String
+  affiliateProgramId String
+  status             AffiliateApplicationStatus @default(PENDING)
+  createdAt          DateTime                  @default(now())
+  updatedAt          DateTime                  @updatedAt
+
+  affiliate       Affiliate        @relation(fields: [affiliateId], references: [id], onDelete: Cascade)
+  affiliateProgram AffiliateProgram @relation(fields: [affiliateProgramId], references: [id], onDelete: Cascade)
+
+  @@unique([affiliateId, affiliateProgramId])
+  @@index([affiliateProgramId])
+}
+
+model AffiliateLink {
+  id          String              @id @default(cuid())
+  affiliateId String
+  programId   String
+  productId   String
+  code        String              @unique
+  status      AffiliateLinkStatus @default(ACTIVE)
+  createdAt   DateTime            @default(now())
+
+  affiliate Affiliate        @relation(fields: [affiliateId], references: [id], onDelete: Cascade)
+  program   AffiliateProgram @relation(fields: [programId], references: [id], onDelete: Cascade)
+  product   Product          @relation(fields: [productId], references: [id], onDelete: Restrict)
+  orders    Order[]
+  sales     Sale[]
+
+  @@index([affiliateId])
+  @@index([programId])
+  @@index([productId])
+}
+
+model Customer {
+  id        String   @id @default(cuid())
+  userId    String?
+  name      String
+  email     String
+  document  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user     User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  orders   Order[]
+  accesses Access[]
+
+  @@index([userId])
+  @@index([email])
+}
+
+model Order {
+  id              String      @id @default(cuid())
+  customerId      String
+  productId       String
+  offerId         String?
+  affiliateLinkId String?
+  status          OrderStatus @default(PENDING)
+  amount          Int
+  subtotal        Int          @default(0)
+  discount        Int          @default(0)
+  total           Int
+  currency        String      @default("BRL")
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  customer         Customer         @relation(fields: [customerId], references: [id], onDelete: Restrict)
+  product          Product          @relation(fields: [productId], references: [id], onDelete: Restrict)
+  offer            Offer?           @relation(fields: [offerId], references: [id], onDelete: SetNull)
+  affiliateLink    AffiliateLink?   @relation(fields: [affiliateLinkId], references: [id], onDelete: SetNull)
+  payment          Payment?
+  sale             Sale?
+  commission       Commission?
+  access           Access?
+  financialEntries FinancialEntry[]
+
+  @@index([customerId])
+  @@index([productId])
+  @@index([status, createdAt])
+}
+
+model Payment {
+  id                String        @id @default(cuid())
+  orderId           String        @unique
+  provider          String
+  providerPaymentId String?       @unique
+  status            PaymentStatus @default(PENDING)
+  method            String
+  amount            Int
+  currency          String        @default("BRL")
+  rawResponse       Json?
+  paidAt            DateTime?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  order           Order            @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  refunds         Refund[]
+  disputes        Dispute[]
+  financialEntries FinancialEntry[]
+}
+
+model Sale {
+  id              String   @id @default(cuid())
+  orderId         String   @unique
+  productId       String
+  producerId      String
+  affiliateId     String?
+  affiliateLinkId String?
+  amount          Int
+  status          String   @default("APPROVED")
+  createdAt       DateTime @default(now())
+
+  order         Order          @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product       Product        @relation(fields: [productId], references: [id], onDelete: Restrict)
+  producer      User           @relation("SaleProducer", fields: [producerId], references: [id], onDelete: Restrict)
+  affiliate     Affiliate?     @relation(fields: [affiliateId], references: [id], onDelete: SetNull)
+  affiliateLink AffiliateLink? @relation(fields: [affiliateLinkId], references: [id], onDelete: SetNull)
+  commission    Commission?
+}
+
+model Commission {
+  id          String           @id @default(cuid())
+  orderId     String           @unique
+  saleId      String           @unique
+  affiliateId String
+  amount      Int
+  status      CommissionStatus @default(PENDING)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  order     Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  sale      Sale      @relation(fields: [saleId], references: [id], onDelete: Cascade)
+  affiliate Affiliate @relation(fields: [affiliateId], references: [id], onDelete: Restrict)
+}
+
+model Access {
+  id         String       @id @default(cuid())
+  customerId String
+  productId  String
+  orderId    String?      @unique
+  status     AccessStatus @default(ACTIVE)
+  grantedAt  DateTime     @default(now())
+  revokedAt  DateTime?
+
+  customer Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  product  Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  order    Order?   @relation(fields: [orderId], references: [id], onDelete: SetNull)
+
+  @@unique([customerId, productId])
+  @@index([customerId])
+  @@index([productId])
+}
+
+model Course {
+  id        String   @id @default(cuid())
+  productId String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  product Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  modules Module[]
+}
+
+model Module {
+  id        String   @id @default(cuid())
+  courseId  String
+  title     String
+  position  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  course  Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  lessons Lesson[]
+
+  @@index([courseId])
+}
+
+model Lesson {
+  id        String   @id @default(cuid())
+  moduleId  String
+  title     String
+  content   String?
+  position  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  module Module @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@index([moduleId])
+}
+
+model WebhookEvent {
+  id              String   @id @default(cuid())
+  provider        String
+  externalEventId String
+  eventType       String?
+  payload         Json
+  status          String   @default("RECEIVED")
+  processedAt     DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@unique([provider, externalEventId])
+  @@index([provider])
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  entity    String?
+  entityId  String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([entity, entityId])
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  message   String
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model RefreshSession {
+  id        String   @id @default(cuid())
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  revokedAt DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Refund {
+  id               String       @id @default(cuid())
+  paymentId        String
+  amount           Int
+  reason           String?
+  status           RefundStatus @default(PENDING)
+  providerRefundId String?
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+
+  payment Payment @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+
+  @@index([paymentId])
+}
+
+model Dispute {
+  id                String        @id @default(cuid())
+  paymentId         String
+  status            DisputeStatus @default(OPEN)
+  providerDisputeId String?       @unique
+  amount            Int?
+  reason            String?
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  payment Payment @relation(fields: [paymentId], references: [id], onDelete: Cascade)
+
+  @@index([paymentId])
+}
+
+model FinancialEntry {
+  id          String             @id @default(cuid())
+  paymentId   String?
+  orderId     String?
+  type        FinancialEntryType
+  amount      Int
+  description String?
+  createdAt   DateTime           @default(now())
+
+  payment Payment? @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+  order   Order?   @relation(fields: [orderId], references: [id], onDelete: SetNull)
+
+  @@index([paymentId])
+  @@index([orderId])
+  @@index([type, createdAt])
+}
+
+model PasswordResetToken {
+  id        String   @id @default(cuid())
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model EmailVerificationToken {
+  id        String   @id @default(cuid())
+  userId    String
+  tokenHash String   @unique
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Consent {
+  id        String      @id @default(cuid())
+  userId    String
+  type      ConsentType
+  version   String
+  grantedAt DateTime    @default(now())
+  revokedAt DateTime?
+  ipHash    String?
+  userAgent String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([type])
+}

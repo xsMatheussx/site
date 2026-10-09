@@ -1,0 +1,1306 @@
+.page {
+  --bg: #0e0d0c;
+  --panel: #171412;
+  --panel-2: #1d1915;
+  --line: rgba(255,255,255,.08);
+  --muted: #a1a1aa;
+  --text: #f7f7f8;
+  --accent: #b58a5a;
+  --accent-2: #8f7960;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 78% 8%, rgba(181,138,90,.09), transparent 28%),
+    radial-gradient(circle at 12% 18%, rgba(214,189,156,.025), transparent 24%),
+    var(--bg);
+}
+
+.backgroundGlow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .35;
+  background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+.container { width: min(1200px, calc(100% - 40px)); margin: 0 auto; }
+
+.header { position: sticky; top: 0; z-index: 50; background: rgba(9,9,11,.72); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+.headerInner { width: min(1240px, calc(100% - 28px)); margin: 0 auto; height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.nav { display: flex; align-items: center; gap: 26px; }
+.nav a, .login { color: #c7c7cc; font-size: 13px; letter-spacing: .008em; text-decoration: none; transition: color .2s ease; }
+.nav a:hover, .login:hover { color: #fff; }
+.actions { display: flex; align-items: center; gap: 16px; }
+.register { color: #0b0b0d; background: #f4f4f5; border-radius: 999px; padding: 11px 16px; font-weight: 700; text-decoration: none; font-size: 13px; }
+
+.brand, .brandCompact { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; color: #fff; }
+.logoMark { position: relative; width: clamp(35px, 3vw, 43px); height: clamp(35px, 3vw, 43px); border-radius: 12px; display: grid; place-items: center; overflow: hidden; background: linear-gradient(145deg, #d0af82, #9d7649 55%, #755637); box-shadow: 0 10px 28px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.08); animation: logoFloat 3.6s ease-in-out infinite; }
+.logoMark::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 10px;
+  background: #12100e;
+  z-index: 0;
+}
+.logoMark span { position: absolute; z-index: 1; font-size: 11px; letter-spacing: .005em; font-weight: 900; letter-spacing: -.035em; }
+.logoMark span:first-child { transform: translate(-4px,-3px); color: #fff; }
+.logoMark span:last-child { transform: translate(4px,3px); color: #d6bd9c; }
+.wordmark { display: flex; flex-direction: row; align-items: baseline; gap: 5px; line-height: .95; }
+.wordmark strong { font-size: 17px; letter-spacing: -.035em; }
+.wordmark > span { font-size: 8px; color: #73737c; letter-spacing: .18em; }
+.brandCompact .logoMark { width: 31px; height: 31px; border-radius: 10px; }
+.brandCompact .wordmark strong { font-size: 14px; }
+.brandCompact .wordmark > span { font-size: 7px; }
+@keyframes logoFloat {
+  0%,100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-2px) scale(1.035);
+  }
+}
+
+.hero { padding: 82px 0 64px; position: relative; }
+.heroContainer { display: grid; grid-template-columns: minmax(0, 1.04fr) minmax(420px, .96fr); gap: 70px; align-items: center; }
+.pill { display: inline-flex; align-items: center; gap: 9px; border: 1px solid var(--line); background: rgba(255,255,255,.035); color: #bebec7; border-radius: 999px; padding: 8px 13px; font-size: 12px; }
+.liveDot { width: 7px; height: 7px; border-radius: 999px; background: #c2a06e; box-shadow: 0 0 8px rgba(194,160,110,.35); animation: pulse 1.8s ease infinite; }
+@keyframes pulse { 50% { opacity: .35; transform: scale(.72) } }
+.heroCopy h1 { margin: 22px 0 18px; font-size: clamp(60px, 7vw, 104px); line-height: .9; letter-spacing: -.042em; max-width: 720px; }
+.heroCopy h1 span { color: transparent; background: linear-gradient(100deg, #fff 0%, #d6bd9c 35%, #c7a57a 78%); -webkit-background-clip: text; background-clip: text; }
+.heroCopy p { max-width: 585px; color: var(--muted); font-size: 18px; line-height: 1.68; letter-spacing: -.008em; }
+.heroButtons { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.primaryButton, .secondaryButton { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 14px; padding: 14px 18px; text-decoration: none; font-weight: 700; font-size: 14px; letter-spacing: -.008em; }
+.primaryButton { background: linear-gradient(135deg, #f6f6f8, #d9d9df); color: #0e0d0c; box-shadow: 0 12px 36px rgba(255,255,255,.08); }
+.primaryButton span { font-size: 17px; }
+.secondaryButton { color: #ededf2; border: 1px solid var(--line); background: rgba(255,255,255,.025); }
+.trustLine { display: flex; align-items: center; gap: 10px; color: #74747d; font-size: 11px; letter-spacing: .005em; text-transform: uppercase; letter-spacing: .10em; margin-top: 28px; flex-wrap: wrap; }
+.trustLine i { width: 4px; height: 4px; border-radius: 50%; background: #45454d; }
+
+.heroVisual { position: relative; min-height: 530px; display: grid; place-items: center; }
+.heroVisual::before { content: ""; position: absolute; width: 480px; height: 480px; border-radius: 50%; background: radial-gradient(circle, rgba(181,138,90,.07), transparent 68%); filter: blur(4px); }
+.orbit { position: absolute; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; animation: orbit 12s linear infinite; }
+.orbitOne { width: 480px; height: 480px; transform: rotate(-18deg); }
+.orbitTwo { width: 360px; height: 360px; animation-direction: reverse; }
+@keyframes orbit { to { transform: rotate(342deg) } }
+.heroCard { position: relative; z-index: 2; width: min(100%, 510px); padding: 22px; border: 1px solid rgba(255,255,255,.11); border-radius: 26px; background: linear-gradient(180deg, rgba(24,24,30,.96), rgba(13,13,17,.96)); box-shadow: 0 35px 90px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.05); transform: rotate(-2.6deg); animation: floatCard 5.5s ease-in-out infinite; }
+@keyframes floatCard { 50% { transform: rotate(-1deg) translateY(-8px) } }
+.cardHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+.cardHeader > div { display: flex; flex-direction: column; gap: 6px; }
+.cardHeader span { color: #777780; font-size: 10px; letter-spacing: .16em; }
+.cardHeader strong { font-size: 19px; letter-spacing: -.018em; }
+.cardBadge { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: #0b0b0e !important; background: linear-gradient(135deg, #cfad7f, #d1ae78); font-weight: 900; letter-spacing: -.06em !important; box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+.graphWrap { margin-top: 26px; padding: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.02); border-radius: 18px; }
+.graphTop { display: flex; justify-content: space-between; color: #80808a; font-size: 11px; letter-spacing: .005em; }
+.graphTop strong { color: #c9a26c; font-size: 14px; }
+.graph { margin-top: 18px; height: 160px; display: flex; align-items: end; gap: 8px; }
+.bar { flex: 1; border-radius: 7px 7px 3px 3px; background: linear-gradient(180deg, rgba(139,92,246,.95), rgba(139,92,246,.15)); min-width: 10px; animation: bars 4.6s ease-in-out infinite; transform-origin: bottom; }
+.bar:nth-child(2n) { animation-delay: -.5s; }
+.bar:nth-child(3n) { animation-delay: -1.1s; }
+.barHighlight { background: linear-gradient(180deg, #d1ae78, rgba(34,211,238,.12)); box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+@keyframes bars { 50% { transform: scaleY(.82) } }
+.metricGrid { margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.metricGrid div { padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: rgba(255,255,255,.018); }
+.metricGrid span { display: block; color: #6d6d75; font-size: 10px; margin-bottom: 6px; }
+.metricGrid strong { font-size: 16px; }
+.floatingCard { position: absolute; right: 0; bottom: 18px; z-index: 4; width: 240px; padding: 16px; border: 1px solid rgba(255,255,255,.10); border-radius: 18px; background: rgba(18,18,23,.92); box-shadow: 0 20px 50px rgba(0,0,0,.35); transform: rotate(4deg); animation: floatSmall 4s ease-in-out infinite; }
+@keyframes floatSmall { 50% { transform: rotate(2deg) translateY(-9px) } }
+.floatingCard span { color: #81818b; font-size: 9px; letter-spacing: .17em; }
+.floatingCard strong { display: block; margin-top: 8px; font-size: 15px; }
+.floatingCard small { display: block; margin-top: 6px; color: #878790; line-height: 1.5; font-size: 11px; letter-spacing: .005em; }
+
+.searchSection, .products, .business, .stats, .final { padding: 62px 0; }
+.searchSection { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.012); }
+.sectionIntro { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+.sectionIntro > div > span, .businessIntro > span, .finalCard > div > span { color: #73737c; font-size: 10px; letter-spacing: .15em; font-weight: 700; }
+.sectionIntro h2 { margin: 8px 0 0; font-size: clamp(28px, 4vw, 48px); letter-spacing: -.038em; line-height: 1.02; }
+.inlineLink { color: #d8d8dd; text-decoration: none; font-size: 13px; }
+.searchBox { margin-top: 30px; height: 60px; display: flex; align-items: center; gap: 14px; padding: 0 18px; border: 1px solid var(--line); border-radius: 16px; background: #0e0e12; }
+.searchBox svg { width: 20px; stroke: #7a7a84; fill: none; stroke-width: 1.7; }
+.searchBox input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: #fff; font-size: 15px; }
+.searchBox input::placeholder { color: #686870; }
+.searchBox kbd { color: #696971; border: 1px solid var(--line); border-radius: 7px; padding: 5px 7px; font-size: 10px; white-space: nowrap; }
+.categories { margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
+.categories button { border: 1px solid transparent; background: transparent; color: #7f7f88; border-radius: 999px; padding: 8px 12px; font-size: 11px; letter-spacing: .005em; cursor: pointer; transition: .2s ease; }
+.categories button:hover { color: #fff; border-color: var(--line); }
+.categoryActive { color: #fff !important; background: rgba(255,255,255,.06) !important; border-color: var(--line) !important; }
+
+.productGrid { margin-top: 26px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.product { text-decoration: none; color: inherit; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: linear-gradient(180deg,#111116,#0d0d11); transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.product:hover { transform: translateY(-7px); border-color: rgba(181,138,90,.28); box-shadow: 0 28px 60px rgba(0,0,0,.32); }
+.cover { aspect-ratio: 1.28/1; position: relative; overflow: hidden; display: flex; align-items: flex-end; justify-content: space-between; padding: 18px; }
+.cover::before, .cover::after { content: ""; position: absolute; border-radius: 50%; filter: blur(3px); }
+.cover::before { width: 160px; height: 160px; right: -24px; top: -25px; background: rgba(255,255,255,.09); }
+.cover::after { width: 100px; height: 100px; left: -25px; bottom: -25px; background: rgba(255,255,255,.06); }
+.coverOne { background: linear-gradient(135deg, #1c1238, #261a52 45%, #29221b); }
+.coverTwo { background: linear-gradient(135deg, #29231c, #514232 50%, #272019); }
+.coverThree { background: linear-gradient(135deg, #291f18, #4a3828 50%, #13131b); }
+.cover > span { position: relative; z-index: 1; font-size: 54px; font-weight: 900; letter-spacing: -.05em; }
+.cover > small { position: relative; z-index: 1; padding: 6px 8px; border: 1px solid rgba(255,255,255,.11); border-radius: 999px; background: rgba(0,0,0,.18); font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: #d5d5db; }
+.productBody { padding: 17px; display: flex; justify-content: space-between; gap: 12px; }
+.productBody strong { font-size: 16px; letter-spacing: -.012em; }
+.productBody p { margin: 7px 0 0; color: #85858e; font-size: 12px; line-height: 1.58; letter-spacing: -.002em; max-width: 290px; }
+.productBody > span { color: #8c8c95; font-size: 18px; }
+.productCount { color: #65656e; font-size: 12px; }
+.empty { margin-top: 26px; min-height: 250px; border: 1px dashed rgba(255,255,255,.11); border-radius: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 28px; background: rgba(255,255,255,.015); }
+.emptyIcon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 14px; margin-bottom: 12px; background: linear-gradient(135deg,#b58a5a,#8f7960); color: #0b0b0e; font-weight: 900; }
+.empty strong { font-size: 17px; }
+.empty p { color: #777780; font-size: 13px; }
+
+.business { border-top: 1px solid var(--line); }
+.businessShell { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; align-items: stretch; }
+.businessIntro { display: flex; flex-direction: column; justify-content: center; }
+.businessIntro h2 { margin: 10px 0 18px; font-size: clamp(36px, 5vw, 64px); line-height: .98; letter-spacing: -.042em; }
+.businessIntro h2 em { font-style: normal; color: transparent; background: linear-gradient(100deg,#fff,#d6bd9c,#c7a57a); -webkit-background-clip: text; background-clip: text; }
+.businessIntro p { color: #898991; line-height: 1.65; max-width: 390px; }
+.businessGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.businessCard { position: relative; overflow: hidden; min-height: 340px; padding: 24px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(180deg,#1d1915,#0d0d10); text-decoration: none; color: #fff; transition: transform .25s ease, border-color .25s ease; }
+.businessCard::after { content: ""; position: absolute; width: 200px; height: 200px; border-radius: 50%; right: -70px; bottom: -70px; background: rgba(139,92,246,.14); filter: blur(3px); }
+.businessCardAlt::after { background: rgba(34,211,238,.11); }
+.businessCard:hover { transform: translateY(-6px); border-color: rgba(255,255,255,.16); }
+.businessNumber { position: absolute; top: 20px; right: 20px; color: #4d4d55; font-size: 12px; }
+.businessCard > span { display: inline-block; margin-top: 28px; color: #777780; font-size: 9px; letter-spacing: .18em; }
+.businessCard h3 { margin: 18px 0 12px; max-width: 280px; font-size: 30px; line-height: 1; letter-spacing: -.035em; }
+.businessCard p { color: #888891; line-height: 1.62; font-size: 13px; letter-spacing: -.004em; max-width: 300px; }
+.businessCard b { position: absolute; z-index: 2; left: 24px; bottom: 24px; font-size: 11px; letter-spacing: .005em; color: #d9d9de; }
+
+.stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(255,255,255,.012); }
+.stats .container { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat { min-height: 150px; padding: 0 20px; border-right: 1px solid var(--line); }
+.stat:first-child { padding-left: 0; }
+.stat:last-child { border-right: 0; }
+.stat strong { display: block; font-size: 12px; color: #55555e; }
+.stat span { display: block; margin-top: 26px; font-size: 13px; font-weight: 700; letter-spacing: -.006em; }
+.stat p { color: #74747d; font-size: 12px; line-height: 1.5; max-width: 190px; }
+
+.final { padding-bottom: 70px; }
+.finalCard { min-height: 300px; border: 1px solid var(--line); border-radius: 28px; padding: 34px; display: flex; align-items: end; justify-content: space-between; gap: 24px; background: radial-gradient(circle at 82% 40%, rgba(181,138,90,.08), transparent 34%), radial-gradient(circle at 28% 60%, rgba(214,189,156,.025), transparent 25%), #111116; overflow: hidden; }
+.finalCard h2 { margin: 10px 0 0; font-size: clamp(44px, 6vw, 78px); line-height: 1.01; letter-spacing: -.045em; }
+.finalCard h2 em { font-style: normal; color: #92929b; }
+
+.footer { border-top: 1px solid var(--line); padding: 34px 0 18px; }
+.footerTop { display: flex; align-items: center; gap: 20px; }
+.footerTop p { margin: 0; color: #676770; font-size: 11px; letter-spacing: .005em; }
+.footerLinks { margin-left: auto; display: flex; gap: 18px; flex-wrap: wrap; }
+.footerLinks a { color: #9a9aa3; text-decoration: none; font-size: 11px; letter-spacing: .005em; }
+.footerBottom { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; color: #56565e; font-size: 10px; }
+
+@media (max-width: 980px) {
+  .nav { display: none; }
+  .heroContainer { grid-template-columns: 1fr; gap: 30px; }
+  .heroVisual { min-height: 470px; }
+  .businessShell { grid-template-columns: 1fr; }
+  .productGrid { grid-template-columns: repeat(2, 1fr); }
+  .stats .container { grid-template-columns: repeat(2,1fr); }
+  .stat:nth-child(2) { border-right: 0; }
+  .stat:nth-child(n+3) { margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--line); }
+}
+
+@media (max-width: 640px) {
+  .container { width: min(100% - 24px, 1200px); }
+  .headerInner { height: 70px; }
+  .actions .login { display: none; }
+  .register { padding: 10px 13px; }
+  .hero { padding-top: 56px; }
+  .heroCopy h1 { font-size: clamp(52px, 18vw, 76px); }
+  .heroCopy p { font-size: 15px; }
+  .heroVisual { min-height: 370px; }
+  .heroCard { padding: 16px; border-radius: 20px; }
+  .orbitOne { width: 350px; height: 350px; }
+  .orbitTwo { width: 270px; height: 270px; }
+  .floatingCard { right: -4px; bottom: 2px; width: 195px; }
+  .metricGrid { gap: 7px; }
+  .metricGrid div { padding: 9px; }
+  .metricGrid strong { font-size: 13px; }
+  .searchSection, .products, .business, .stats { padding: 44px 0; }
+  .sectionIntro { align-items: flex-start; }
+  .sectionIntro h2 { font-size: 30px; }
+  .searchBox kbd { display: none; }
+  .productGrid { grid-template-columns: 1fr; }
+  .businessGrid { grid-template-columns: 1fr; }
+  .businessCard { min-height: 300px; }
+  .stats .container { grid-template-columns: 1fr 1fr; }
+  .stat { padding: 0 12px; }
+  .stat:nth-child(odd) { border-right: 1px solid var(--line); }
+  .stat:nth-child(even) { border-right: 0; }
+  .finalCard { min-height: 280px; padding: 24px; flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+  .finalCard h2 { font-size: 48px; }
+  .footerTop { flex-wrap: wrap; }
+  .footerLinks { margin-left: 0; width: 100%; }
+  .footerBottom { flex-direction: column; }
+}
+
+.logoMark::after {
+  content: "";
+  position: absolute;
+  width: 48%;
+  height: 145%;
+  left: -70%;
+  top: -22%;
+  transform: rotate(24deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.16),
+    transparent
+  );
+  animation: logoSweep 3.8s ease-in-out infinite;
+}
+
+@keyframes logoSweep {
+  0%, 30% { left: -70%; }
+  65%, 100% { left: 125%; }
+}
+/* ============================================================
+   TZ STORE — IDENTIDADE VISUAL FINAL
+   Grafite + Vinho Queimado + Cobre
+   ============================================================ */
+
+.page {
+  --bg: #0f1012;
+  --panel: #17181b;
+  --panel-2: #1e1f23;
+  --line: rgba(255,255,255,.085);
+
+  --muted: #a4a0a0;
+  --text: #f5f2ef;
+
+  --accent: #b86b54;
+  --accent-2: #c99a6b;
+
+  background:
+    radial-gradient(
+      circle at 82% 6%,
+      rgba(184,107,84,.10),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 8% 28%,
+      rgba(201,154,107,.035),
+      transparent 24%
+    ),
+    var(--bg);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.header {
+  background: rgba(15,16,18,.90);
+  border-bottom-color: rgba(255,255,255,.075);
+}
+
+.nav a,
+.login {
+  color: #aaa6a4;
+}
+
+.nav a:hover,
+.login:hover {
+  color: #ffffff;
+}
+
+.register {
+  background: #eee8e2;
+  color: #171313;
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    background .22s ease;
+}
+
+.register:hover {
+  transform: translateY(-2px);
+  background: #f7f1eb;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.logoMark {
+  position: relative;
+  width: clamp(37px, 3.2vw, 46px);
+  height: clamp(37px, 3.2vw, 46px);
+
+  border-radius: 13px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d2a174 0%,
+      #b86b54 48%,
+      #7e4538 100%
+    );
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.32),
+    inset 0 1px 0 rgba(255,255,255,.16);
+
+  animation:
+    logoEntrance .8s cubic-bezier(.22,1,.36,1) both,
+    logoBreath 4.8s ease-in-out 1s infinite;
+
+  transition:
+    transform .35s cubic-bezier(.22,1,.36,1),
+    box-shadow .35s ease;
+}
+
+.logoMark:hover {
+  transform:
+    perspective(500px)
+    rotateX(5deg)
+    rotateY(-7deg)
+    translateY(-3px)
+    scale(1.045);
+
+  box-shadow:
+    0 18px 38px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+.logoMark::before {
+  content: "";
+
+  position: absolute;
+  inset: 2px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #191716,
+      #111111
+    );
+
+  z-index: 0;
+}
+
+.logoMark::after {
+  content: "";
+
+  position: absolute;
+
+  width: 42%;
+  height: 145%;
+
+  left: -70%;
+  top: -20%;
+
+  transform: rotate(24deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,244,228,.22),
+      transparent
+    );
+
+  z-index: 2;
+
+  animation:
+    logoSweep 4.8s cubic-bezier(.22,1,.36,1)
+    1.1s infinite;
+}
+
+.logoMark span {
+  position: absolute;
+  z-index: 3;
+
+  font-family:
+    "Segoe UI Variable Display",
+    "Space Grotesk",
+    "Arial",
+    sans-serif;
+
+  font-weight: 800;
+
+  letter-spacing: -.13em;
+
+  line-height: 1;
+}
+
+.logoMark span:first-child {
+  color: #f7eee7;
+  font-size: 14px;
+
+  transform:
+    translate(-3px,-3px)
+    scaleX(.94);
+}
+
+.logoMark span:last-child {
+  color: #d3a276;
+  font-size: 14px;
+
+  transform:
+    translate(4px,3px)
+    scaleX(.94);
+}
+
+.wordmark strong,
+.wordmark > span {
+  font-family:
+    "Segoe UI Variable Display",
+    "Space Grotesk",
+    "Arial",
+    sans-serif;
+}
+
+.wordmark strong {
+  font-weight: 800;
+  letter-spacing: -.055em;
+}
+
+.wordmark > span {
+  color: #827b77;
+  letter-spacing: .24em;
+}
+
+@keyframes logoEntrance {
+  from {
+    opacity: 0;
+    transform:
+      translateY(8px)
+      scale(.88);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+@keyframes logoBreath {
+  0%,100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.045);
+  }
+}
+
+@keyframes logoSweep {
+  0%,38% {
+    left: -70%;
+  }
+
+  58%,72% {
+    left: 125%;
+  }
+
+  100% {
+    left: 125%;
+  }
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.heroVisual::before {
+  background:
+    radial-gradient(
+      circle,
+      rgba(184,107,84,.085),
+      transparent 68%
+    );
+}
+
+.heroCopy h1 span {
+  background:
+    linear-gradient(
+      105deg,
+      #f6f1ed 0%,
+      #d6a77d 45%,
+      #b86b54 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.pill {
+  background: rgba(255,255,255,.028);
+  border-color: rgba(255,255,255,.085);
+}
+
+.liveDot {
+  background: #c99a6b;
+  box-shadow: 0 0 9px rgba(201,154,107,.28);
+}
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+
+.primaryButton {
+  background:
+    linear-gradient(
+      135deg,
+      #f1ebe5,
+      #d7c8bd
+    );
+
+  color: #171313;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.22);
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 36px rgba(0,0,0,.28);
+}
+
+.secondaryButton {
+  background: rgba(255,255,255,.025);
+  color: #eee8e3;
+}
+
+.secondaryButton:hover {
+  border-color: rgba(201,154,107,.28);
+}
+
+/* ============================================================
+   HERO CARD
+   ============================================================ */
+
+.heroCard {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(29,27,28,.97),
+      rgba(17,17,18,.98)
+    );
+
+  border-color: rgba(255,255,255,.10);
+
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.42),
+    inset 0 1px 0 rgba(255,255,255,.055);
+}
+
+.cardBadge {
+  background:
+    linear-gradient(
+      145deg,
+      #d0a071,
+      #b86b54
+    );
+
+  color: #181313 !important;
+
+  box-shadow:
+    0 9px 22px rgba(0,0,0,.22);
+}
+
+.graphTop strong {
+  color: #d1ad7f;
+}
+
+.bar {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(184,107,84,.92),
+      rgba(184,107,84,.16)
+    );
+}
+
+.barHighlight {
+  background:
+    linear-gradient(
+      180deg,
+      #d09b71,
+      rgba(201,154,107,.15)
+    );
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.16);
+}
+
+/* ============================================================
+   BUSCA
+   ============================================================ */
+
+.searchBox {
+  background: #141517;
+}
+
+.categoryActive {
+  background: rgba(184,107,84,.09) !important;
+  border-color: rgba(184,107,84,.22) !important;
+}
+
+/* ============================================================
+   PRODUTOS
+   ============================================================ */
+
+.product {
+  background:
+    linear-gradient(
+      180deg,
+      #181719,
+      #121315
+    );
+}
+
+.product:hover {
+  border-color: rgba(184,107,84,.30);
+
+  box-shadow:
+    0 24px 52px rgba(0,0,0,.30);
+}
+
+.coverOne {
+  background:
+    linear-gradient(
+      135deg,
+      #241b1a,
+      #4b3028 52%,
+      #211719
+    );
+}
+
+.coverTwo {
+  background:
+    linear-gradient(
+      135deg,
+      #1b1a19,
+      #49352a 52%,
+      #211818
+    );
+}
+
+.coverThree {
+  background:
+    linear-gradient(
+      135deg,
+      #251818,
+      #4b2d29 52%,
+      #191516
+    );
+}
+
+/* ============================================================
+   CARDS DE NEGÓCIO
+   ============================================================ */
+
+.businessCard {
+  background:
+    linear-gradient(
+      180deg,
+      #191719,
+      #121314
+    );
+}
+
+.businessCard::after {
+  background: rgba(184,107,84,.09);
+}
+
+.businessCardAlt::after {
+  background: rgba(201,154,107,.075);
+}
+
+.businessCard:hover {
+  border-color: rgba(201,154,107,.24);
+}
+
+/* ============================================================
+   SEÇÃO FINAL
+   ============================================================ */
+
+.finalCard {
+  background:
+    radial-gradient(
+      circle at 82% 38%,
+      rgba(184,107,84,.10),
+      transparent 33%
+    ),
+    radial-gradient(
+      circle at 24% 65%,
+      rgba(201,154,107,.035),
+      transparent 25%
+    ),
+    #171719;
+}
+
+.finalCard h2 em {
+  color: #96908b;
+}
+
+/* ============================================================
+   LINKS / DETALHES
+   ============================================================ */
+
+.inlineLink:hover,
+.footerLinks a:hover {
+  color: #d7a378;
+}
+
+.emptyIcon {
+  background:
+    linear-gradient(
+      145deg,
+      #d0a071,
+      #b86b54
+    );
+
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.22);
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .logoMark {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+
+  .logoMark span:first-child,
+  .logoMark span:last-child {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TZ STORE — BRAND FINAL
+   Grafite + Burgundy + Champagne
+   ========================================================= */
+
+.page {
+  --bg: #0d0e10;
+  --panel: #151619;
+  --panel-2: #1b1c20;
+
+  --line: rgba(255,255,255,.09);
+  --muted: #a29d9a;
+  --text: #f4f1ee;
+
+  --accent: #7f2637;
+  --accent-2: #c8a071;
+
+  background:
+    radial-gradient(
+      circle at 78% 0%,
+      rgba(127,38,55,.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 24%,
+      rgba(200,160,113,.055),
+      transparent 22%
+    ),
+    #0d0e10;
+}
+
+/* HEADER */
+
+.header {
+  background: rgba(13,14,16,.94);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.nav a,
+.login {
+  color: #aaa5a2;
+}
+
+.nav a:hover,
+.login:hover {
+  color: #fff;
+}
+
+/* =========================================================
+   LOGO REAL — usa styles.logo no seu page.tsx
+   ========================================================= */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  position: relative;
+
+  width: clamp(38px, 3vw, 46px);
+  height: clamp(38px, 3vw, 46px);
+
+  flex: 0 0 auto;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #a44757 0%,
+      #7f2637 46%,
+      #4b1824 100%
+    );
+
+  border: 1px solid rgba(255,255,255,.14);
+
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.14);
+
+  overflow: hidden;
+
+  animation:
+    logoEnter .7s cubic-bezier(.22,1,.36,1) both,
+    logoFloat 4.5s ease-in-out 1s infinite;
+
+  transition:
+    transform .28s cubic-bezier(.22,1,.36,1),
+    box-shadow .28s ease;
+}
+
+.logo::before {
+  content: "TZ";
+
+  position: absolute;
+
+  z-index: 3;
+
+  font-family:
+    "Arial Black",
+    "Bahnschrift SemiBold",
+    "Segoe UI",
+    sans-serif;
+
+  font-size: clamp(14px, 1.2vw, 17px);
+
+  font-weight: 900;
+
+  letter-spacing: -.15em;
+
+  color: #f8eee5;
+
+  transform: translateX(-1px);
+}
+
+.logo::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+
+  width: 38%;
+  height: 160%;
+
+  top: -30%;
+  left: -70%;
+
+  transform: rotate(23deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,243,229,.24),
+      transparent
+    );
+
+  animation:
+    logoSweep 4.2s cubic-bezier(.22,1,.36,1)
+    1.1s infinite;
+}
+
+.logo:hover {
+  transform:
+    translateY(-3px)
+    scale(1.06);
+
+  box-shadow:
+    0 18px 38px rgba(0,0,0,.42),
+    inset 0 1px 0 rgba(255,255,255,.17);
+}
+
+.wordmark strong {
+  font-family:
+    "Arial Black",
+    "Bahnschrift SemiBold",
+    "Segoe UI",
+    sans-serif;
+
+  font-weight: 900;
+  letter-spacing: -.055em;
+}
+
+.wordmark > span {
+  color: #817a76;
+}
+
+@keyframes logoEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes logoFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes logoSweep {
+  0%,35% {
+    left: -70%;
+  }
+
+  58%,100% {
+    left: 125%;
+  }
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.heroVisual::before {
+  background:
+    radial-gradient(
+      circle,
+      rgba(127,38,55,.12),
+      transparent 68%
+    );
+}
+
+.orbit {
+  border-color: rgba(255,255,255,.07);
+}
+
+.heroCopy h1 span {
+  background:
+    linear-gradient(
+      105deg,
+      #f6f1ed 0%,
+      #d3b28d 48%,
+      #9d4656 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* =========================================================
+   BOTOES
+   ========================================================= */
+
+.primaryButton {
+  background:
+    linear-gradient(
+      135deg,
+      #f1e9e1,
+      #d7c8b8
+    );
+
+  color: #171315;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.23);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background: rgba(255,255,255,.025);
+  border-color: rgba(255,255,255,.10);
+}
+
+.secondaryButton:hover {
+  border-color: rgba(200,160,113,.30);
+}
+
+/* =========================================================
+   HERO CARD
+   ========================================================= */
+
+.heroCard {
+  background:
+    linear-gradient(
+      180deg,
+      #19191c,
+      #111214
+    );
+
+  border-color: rgba(255,255,255,.10);
+}
+
+.cardBadge {
+  background:
+    linear-gradient(
+      145deg,
+      #d1ac80,
+      #9b5960
+    );
+
+  color: #161315 !important;
+}
+
+/* =========================================================
+   GRAFICO
+   ========================================================= */
+
+.bar {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(127,38,55,.92),
+      rgba(127,38,55,.14)
+    );
+}
+
+.barHighlight {
+  background:
+    linear-gradient(
+      180deg,
+      #d0aa7c,
+      rgba(200,160,113,.16)
+    );
+
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.17);
+}
+
+.graphTop strong {
+  color: #d0aa7c;
+}
+
+/* =========================================================
+   BUSCA
+   ========================================================= */
+
+.searchBox {
+  background: #141518;
+}
+
+.categoryActive {
+  background: rgba(127,38,55,.13) !important;
+  border-color: rgba(127,38,55,.30) !important;
+}
+
+/* =========================================================
+   PRODUTOS
+   ========================================================= */
+
+.product {
+  background:
+    linear-gradient(
+      180deg,
+      #18191c,
+      #111214
+    );
+}
+
+.product:hover {
+  border-color: rgba(127,38,55,.38);
+
+  box-shadow:
+    0 26px 56px rgba(0,0,0,.34);
+}
+
+.coverOne {
+  background:
+    linear-gradient(
+      135deg,
+      #21161a,
+      #542c37 52%,
+      #191417
+    );
+}
+
+.coverTwo {
+  background:
+    linear-gradient(
+      135deg,
+      #1b1718,
+      #59353a 52%,
+      #191417
+    );
+}
+
+.coverThree {
+  background:
+    linear-gradient(
+      135deg,
+      #211619,
+      #48242d 52%,
+      #161315
+    );
+}
+
+/* =========================================================
+   NEGOCIOS
+   ========================================================= */
+
+.businessCard {
+  background:
+    linear-gradient(
+      180deg,
+      #19191c,
+      #111214
+    );
+}
+
+.businessCard::after {
+  background: rgba(127,38,55,.11);
+}
+
+.businessCardAlt::after {
+  background: rgba(200,160,113,.07);
+}
+
+.businessCard:hover {
+  border-color: rgba(200,160,113,.24);
+}
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.finalCard {
+  background:
+    radial-gradient(
+      circle at 80% 38%,
+      rgba(127,38,55,.13),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 22% 65%,
+      rgba(200,160,113,.04),
+      transparent 25%
+    ),
+    #17181b;
+}
+
+.finalCard h2 em {
+  color: #938b87;
+}
+
+/* =========================================================
+   ICONES / DETALHES
+   ========================================================= */
+
+.emptyIcon {
+  background:
+    linear-gradient(
+      145deg,
+      #caa377,
+      #8e3d4c
+    );
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+
+  .logo::before {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TZ STORE — STATUS / PERFORMANCE GREEN
+   Verde usado apenas em elementos funcionais
+   ========================================================= */
+
+.liveDot {
+  background: #34c759;
+  box-shadow: 0 0 12px rgba(52,199,89,.45);
+}
+
+.graphTop strong {
+  color: #34c759;
+}
+
+.barHighlight {
+  background:
+    linear-gradient(
+      180deg,
+      #34c759 0%,
+      rgba(52,199,89,.18) 100%
+    );
+
+  box-shadow:
+    0 8px 18px rgba(52,199,89,.12);
+}
+
+/* Barras altas recebem o mesmo destaque de desempenho */
+.bar:nth-child(5),
+.bar:nth-child(6) {
+  background:
+    linear-gradient(
+      180deg,
+      #34c759 0%,
+      rgba(52,199,89,.16) 100%
+    );
+}
+
+
+/* GRAFICO - BARRAS ALTAS VERDE / BAIXAS BORDO */
+.graph .bar:nth-child(1),
+.graph .bar:nth-child(2),
+.graph .bar:nth-child(3),
+.graph .bar:nth-child(5) {
+  background: linear-gradient(180deg, #b34f63, #7f2637) !important;
+}
+
+.graph .bar:nth-child(4),
+.graph .bar:nth-child(6),
+.graph .bar:nth-child(7),
+.graph .bar:nth-child(8) {
+  background: linear-gradient(180deg, #35d979, #159957) !important;
+}

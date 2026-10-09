@@ -1,0 +1,17 @@
+# V27 — Security Review
+- [x] Helmet
+- [x] strict validation / forbid unknown properties
+- [x] configurable CORS
+- [x] global rate limiting baseline
+- [x] signed webhook verification
+- [x] private object delivery / presigned URLs
+- [x] ownership checks for digital delivery
+- [x] Argon2id password hashing
+- [x] refresh token hashing + rotation
+- [x] card data excluded from backend; token only
+- [x] public order confirmation endpoint removed
+- [ ] dependency audit with installed lockfile
+- [ ] SAST/DAST
+- [ ] penetration test
+- [ ] production secret manager
+- [ ] Redis-backed distributed throttling verification

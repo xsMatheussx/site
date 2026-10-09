@@ -1,0 +1,49 @@
+{
+  "name": "@tz/api",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "nest start --watch",
+    "build": "nest build",
+    "lint": "echo lint",
+    "typecheck": "tsc --noEmit",
+    "prisma:generate": "prisma generate --schema ./schema.prisma",
+    "prisma:migrate": "prisma migrate dev",
+    "test:e2e": "jest --config test/jest-e2e.json --runInBand"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "latest",
+    "@aws-sdk/s3-request-presigner": "latest",
+    "@nestjs/common": "latest",
+    "@nestjs/config": "latest",
+    "@nestjs/core": "latest",
+    "@nestjs/jwt": "latest",
+    "@nestjs/platform-express": "latest",
+    "@nestjs/throttler": "latest",
+    "@prisma/client": "6.19.0",
+    "argon2": "latest",
+    "class-transformer": "latest",
+    "class-validator": "latest",
+    "helmet": "latest",
+    "ioredis": "latest",
+    "multer": "latest",
+    "reflect-metadata": "latest",
+    "rxjs": "latest"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "latest",
+    "@nestjs/testing": "latest",
+    "@types/cookie-parser": "latest",
+    "@types/express": "latest",
+    "@types/jest": "latest",
+    "@types/multer": "latest",
+    "@types/node": "latest",
+    "@types/supertest": "latest",
+    "cookie-parser": "latest",
+    "jest": "latest",
+    "prisma": "6.19.0",
+    "supertest": "latest",
+    "ts-jest": "latest",
+    "typescript": "5.9.2"
+  }
+}

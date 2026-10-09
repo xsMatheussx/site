@@ -1,0 +1,3884 @@
+DOCUMENTO MESTRE — PLATAFORMA DE INFOPRODUTOS
+VERSÃO 14 — 03/09/2026
+
+==================================================
+STATUS ATUAL
+==================================================
+
+Projeto em definição estratégica.
+
+CONCEITO APROVADO:
+Uma plataforma própria para produtores venderem infoprodutos, com checkout, gestão de vendas, afiliados e comissão da plataforma.
+
+REFERÊNCIA DE MERCADO:
+O fundador citou UTMify como referência e o projeto também considera o modelo de plataformas como Hotmart, Kiwify, Eduzz e Perfect Pay.
+
+IMPORTANTE:
+Não será uma cópia dessas plataformas. O objetivo é encontrar um posicionamento/diferencial próprio.
+
+==================================================
+1. VISÃO DO PRODUTO
+==================================================
+
+A plataforma será um ecossistema para venda de conhecimento/produtos digitais.
+
+PERSONAS:
+
+1. PRODUTOR
+Pessoa que possui um curso, ebook, mentoria, comunidade, arquivos digitais ou outro produto de conhecimento e quer vender.
+
+2. AFILIADO
+Pessoa que quer ganhar dinheiro divulgando produtos de outros produtores.
+
+3. COMPRADOR
+Pessoa que procura e compra um produto digital.
+
+4. ADMINISTRADOR
+Responsável pela plataforma, moderação, pagamentos, suporte, regras e operação.
+
+FLUXO:
+
+PRODUTOR
+→ cadastra produto
+→ configura preço
+→ configura oferta
+→ define comissão de afiliado
+→ publica
+→ recebe vendas
+
+AFILIADO
+→ encontra produto
+→ solicita/entra na afiliação
+→ recebe link
+→ divulga
+→ gera venda
+→ recebe comissão
+
+COMPRADOR
+→ acessa página
+→ compra
+→ pagamento aprovado
+→ recebe acesso
+
+PLATAFORMA
+→ processa/organiza a operação
+→ registra venda
+→ calcula comissões
+→ desconta sua taxa
+→ controla saldo/saques
+→ oferece infraestrutura
+
+==================================================
+2. OPORTUNIDADE IDENTIFICADA
+==================================================
+
+O mercado já possui concorrentes fortes.
+
+A Kiwify oferece atualmente checkout, afiliados, coprodução, área de membros e outros recursos, cobrando por venda. citeturn0search4
+
+A Eduzz também oferece ecossistema de vendas, área de membros, recuperação de vendas, afiliados e vitrine de produtos. citeturn0search1turn0search2
+
+A Hotmart possui sistema de taxas sobre vendas aprovadas e recursos de pagamento e vendas. citeturn0search0turn0search11
+
+A Perfect Pay também possui vitrine de produtos e fluxo de afiliação. citeturn0search18
+
+CONCLUSÃO:
+Não faz sentido entrar no mercado simplesmente prometendo:
+“Também temos checkout e afiliados.”
+
+O diferencial precisa estar em experiência, público, distribuição, preço, ferramentas ou combinação desses elementos.
+
+==================================================
+3. POSICIONAMENTO PROPOSTO
+==================================================
+
+POSICIONAMENTO DE TRABALHO:
+
+“Uma plataforma simples para transformar conhecimento em produto e produto em vendas.”
+
+O foco inicial deve ser reduzir a dificuldade de começar.
+
+A plataforma deve tentar responder:
+
+“Tenho conhecimento, mas não sei montar toda essa operação.”
+
+A plataforma entrega:
+
+PRODUTO
++
+CHECKOUT
++
+PAGAMENTO
++
+AFILIADOS
++
+ENTREGA
++
+MÉTRICAS
+
+em um único lugar.
+
+==================================================
+4. DIFERENCIAL — DIREÇÃO ESCOLHIDA
+==================================================
+
+DIREÇÃO PRINCIPAL:
+
+SIMPLICIDADE + MARKETPLACE + AFILIADOS.
+
+A plataforma não será apenas uma ferramenta de checkout.
+
+Ela deverá aproximar:
+
+PRODUTORES ↔ AFILIADOS ↔ COMPRADORES
+
+O produtor ganha uma infraestrutura simples.
+O afiliado ganha uma vitrine para encontrar produtos.
+O comprador ganha uma experiência de compra simples.
+
+A ideia de marketplace é especialmente importante porque plataformas concorrentes já possuem vitrines/marketplaces de afiliados. Portanto, para competir, a nossa vitrine precisará ser melhor em algum aspecto específico, que será definido na validação.
+
+==================================================
+5. POSSÍVEL DIFERENCIAL FORTE
+==================================================
+
+Hipótese de produto:
+
+“Marketplace de infoprodutos orientado a oportunidades.”
+
+Em vez de mostrar somente produtos, a plataforma poderia mostrar dados úteis para o afiliado, como:
+
+- comissão;
+- preço;
+- categoria;
+- tipo de produto;
+- material de divulgação;
+- taxa de conversão, quando houver dados suficientes;
+- volume de vendas;
+- ticket;
+- recorrência;
+- reputação;
+- aprovação automática/manual;
+- histórico do produto.
+
+Para o produtor:
+
+- facilidade para encontrar afiliados;
+- página para recrutamento;
+- materiais de divulgação;
+- gestão de campanhas;
+- métricas;
+- ranking de afiliados;
+- controle de comissão.
+
+Essa é uma HIPÓTESE, não uma decisão final.
+
+==================================================
+6. MODELO DE COMISSÃO
+==================================================
+
+A comissão definitiva ainda não foi escolhida.
+
+Hipóteses para teste:
+
+MODELO A:
+Percentual sobre cada venda.
+
+MODELO B:
+Percentual + valor fixo por transação.
+
+MODELO C:
+Taxa menor para produtores com maior volume.
+
+MODELO D:
+Plano mensal + taxa menor por venda.
+
+RECOMENDAÇÃO INICIAL:
+Começar com uma estrutura simples e transparente.
+
+Exemplo de teste:
+8,99% + valor fixo por venda.
+
+Esse número é apenas uma hipótese de comparação. A Kiwify informa atualmente 8,99% + R$2,49 por venda; a Eduzz informa em uma de suas páginas 4,90% + R$1,00, mostrando que preço sozinho será difícil de usar como único diferencial. citeturn0search4turn0search10
+
+Não definir preço definitivo antes de calcular:
+- gateway;
+- antifraude;
+- impostos;
+- chargeback;
+- infraestrutura;
+- suporte;
+- saques;
+- custos operacionais.
+
+==================================================
+7. MVP — PRIMEIRA VERSÃO
+==================================================
+
+O MVP deverá ser pequeno.
+
+NÃO construir:
+- IA complexa;
+- aplicativo mobile;
+- dezenas de integrações;
+- automações avançadas;
+- marketplace gigantesco;
+- analytics extremamente avançado.
+
+MVP:
+
+AUTENTICAÇÃO
+- cadastro;
+- login;
+- recuperação de senha;
+- perfis.
+
+PRODUTOR
+- criar produto;
+- nome;
+- descrição;
+- imagem;
+- preço;
+- tipo de entrega;
+- página de vendas básica;
+- configuração de afiliados;
+- dashboard básico.
+
+CHECKOUT
+- página de checkout;
+- identificação do comprador;
+- pagamento;
+- confirmação.
+
+ENTREGA
+- acesso ao produto após pagamento;
+- área de membros simples para cursos;
+- download para arquivos.
+
+AFILIADO
+- catálogo de produtos;
+- solicitar afiliação;
+- link exclusivo;
+- registro de vendas;
+- comissão.
+
+ADMIN
+- usuários;
+- produtos;
+- vendas;
+- comissões;
+- saques;
+- denúncias;
+- bloqueios;
+- configurações.
+
+==================================================
+8. PRODUTOS ACEITOS NO INÍCIO
+==================================================
+
+A definição final ainda está pendente.
+
+Possibilidades iniciais:
+- cursos;
+- ebooks;
+- PDFs;
+- templates;
+- arquivos digitais;
+- comunidades;
+- mentorias;
+- conteúdos digitais.
+
+RECOMENDAÇÃO:
+Começar com produtos digitais que possam ser entregues automaticamente.
+
+Evitar no MVP operações que exijam logística física.
+
+==================================================
+9. PÁGINAS DO MVP
+==================================================
+
+PÚBLICAS:
+
+/
+Landing page
+
+/marketplace
+Catálogo
+
+/produto/[slug]
+Página do produto
+
+/login
+Login
+
+/cadastro
+Cadastro
+
+/checkout/[slug]
+Checkout
+
+PRIVADAS:
+
+/dashboard
+Dashboard geral
+
+/dashboard/produtos
+Produtos
+
+/dashboard/produtos/novo
+Novo produto
+
+/dashboard/vendas
+Vendas
+
+/dashboard/afiliados
+Afiliados
+
+/dashboard/comissoes
+Comissões
+
+/dashboard/saques
+Saques
+
+/dashboard/cliente
+Área do comprador
+
+/dashboard/cursos
+Área de membros
+
+ADMIN:
+
+/admin
+/admin/usuarios
+/admin/produtos
+/admin/vendas
+/admin/saques
+/admin/denuncias
+/admin/configuracoes
+
+==================================================
+10. BANCO DE DADOS — VISÃO INICIAL
+==================================================
+
+Entidades futuras prováveis:
+
+User
+Profile
+Product
+ProductFile
+ProductOffer
+Order
+OrderItem
+Payment
+Affiliate
+AffiliateLink
+AffiliateSale
+Commission
+Payout
+Refund
+Coupon
+Course
+Lesson
+Enrollment
+Review
+Notification
+WebhookEvent
+AuditLog
+
+Relacionamento simplificado:
+
+User
+ ↓
+Product
+ ↓
+Order
+ ↓
+Payment
+
+User
+ ↓
+Affiliate
+ ↓
+AffiliateLink
+ ↓
+AffiliateSale
+ ↓
+Commission
+
+Product
+ ↓
+Course
+ ↓
+Lesson
+
+==================================================
+11. SEGURANÇA E CONFIANÇA
+==================================================
+
+Como a plataforma movimentará dinheiro, segurança será requisito central.
+
+Precisaremos considerar:
+
+- autenticação segura;
+- proteção contra fraude;
+- controle de acesso;
+- logs;
+- webhooks idempotentes;
+- validação de pagamentos;
+- prevenção de manipulação de comissão;
+- proteção de arquivos;
+- controle de downloads;
+- rate limiting;
+- backup;
+- recuperação de conta;
+- 2FA futuramente;
+- moderação de produtos;
+- política de reembolso;
+- política de produtos proibidos.
+
+A implementação real de pagamentos e repasses deverá usar um provedor adequado e ser analisada também sob aspectos jurídicos, fiscais e regulatórios antes do lançamento público.
+
+==================================================
+12. ESTRATÉGIA DE LANÇAMENTO
+==================================================
+
+Não começar tentando trazer milhares de produtores.
+
+FASE 1:
+Encontrar 5–10 produtores iniciais.
+
+FASE 2:
+Cadastrar seus produtos manualmente se necessário.
+
+FASE 3:
+Conseguir os primeiros afiliados.
+
+FASE 4:
+Gerar primeiras vendas.
+
+FASE 5:
+Entrevistar produtores, afiliados e compradores.
+
+FASE 6:
+Melhorar o produto baseado em comportamento real.
+
+Objetivo inicial:
+VALIDAR TRANSAÇÕES, não quantidade de funcionalidades.
+
+==================================================
+13. ESTRATÉGIA DE CRESCIMENTO
+==================================================
+
+Loop desejado:
+
+PRODUTOR CADASTRA PRODUTO
+↓
+AFILIADO ENCONTRA
+↓
+AFILIADO DIVULGA
+↓
+VENDA ACONTECE
+↓
+PRODUTOR GANHA
+↓
+AFILIADO GANHA
+↓
+PLATAFORMA GANHA
+↓
+CASO DE SUCESSO
+↓
+MAIS PRODUTORES
+↓
+MAIS AFILIADOS
+↓
+MAIS VENDAS
+
+Esse loop é mais importante que simplesmente aumentar o número de usuários cadastrados.
+
+==================================================
+14. ROADMAP
+==================================================
+
+SEMANA 1:
+- posicionamento;
+- público inicial;
+- nome;
+- identidade;
+- regras;
+- modelo financeiro.
+
+SEMANA 2:
+- wireframes;
+- fluxo do usuário;
+- arquitetura;
+- banco.
+
+SEMANAS 3–5:
+- autenticação;
+- produtos;
+- marketplace;
+- checkout inicial;
+- painel.
+
+SEMANAS 6–7:
+- afiliados;
+- comissões;
+- entrega;
+- área de membros básica.
+
+SEMANA 8:
+- administração;
+- segurança;
+- testes.
+
+SEMANAS 9–10:
+- pagamentos reais;
+- saques;
+- reembolsos;
+- webhooks.
+
+SEMANAS 11–12:
+- beta fechado;
+- primeiros produtores;
+- primeiros afiliados;
+- primeiras vendas.
+
+PRAZO:
+É uma estimativa de planejamento, não uma promessa.
+
+==================================================
+15. NOME
+==================================================
+
+NOME DEFINITIVO:
+TZ STORE
+
+Requisitos desejados:
+- curto;
+- fácil de falar;
+- fácil de escrever;
+- domínio potencialmente disponível;
+- não parecer cópia de concorrente;
+- possibilidade de virar marca;
+- não limitar a plataforma a um único tipo de produto.
+
+O nome escolhido para a plataforma é TZ Store. A validação de domínio, marca e possíveis conflitos comerciais deverá ser feita antes do lançamento.
+
+==================================================
+16. O QUE NÃO FAZER
+==================================================
+
+- Não copiar identidade de concorrentes.
+- Não lançar sem política de produtos.
+- Não aceitar qualquer produto sem moderação.
+- Não prometer pagamentos instantâneos sem capacidade operacional.
+- Não construir dezenas de funções antes de validar.
+- Não gastar muito com infraestrutura antes de haver usuários.
+- Não definir comissão ignorando custos.
+- Não depender apenas de preço baixo como diferencial.
+- Não tentar atender todos os públicos no primeiro dia.
+
+==================================================
+17. MÉTRICAS IMPORTANTES
+==================================================
+
+Após o MVP:
+
+PRODUTORES:
+- produtores cadastrados;
+- produtores ativos;
+- produtos publicados;
+- produtores com primeira venda.
+
+AFILIADOS:
+- afiliados cadastrados;
+- afiliados ativos;
+- afiliados que geraram venda;
+- vendas por afiliado.
+
+VENDAS:
+- GMV;
+- número de vendas;
+- ticket médio;
+- conversão;
+- reembolso;
+- chargeback.
+
+PLATAFORMA:
+- receita bruta;
+- receita líquida;
+- custo por venda;
+- margem;
+- CAC;
+- LTV.
+
+PRINCIPAL MÉTRICA INICIAL:
+Número de vendas aprovadas por produtores ativos.
+
+==================================================
+18. DECISÕES TOMADAS ATÉ AGORA
+==================================================
+
+✓ Marketplace de infoprodutos.
+✓ Produtores cadastram produtos.
+✓ Plataforma recebe comissão por venda.
+✓ Afiliados farão parte do ecossistema.
+✓ Compradores terão área própria.
+✓ Haverá checkout.
+✓ Haverá entrega digital.
+✓ Haverá área de membros.
+✓ Haverá painel administrativo.
+✓ O MVP será pequeno.
+✓ O projeto terá potencial de evoluir para uma empresa.
+✓ O fundador possui formação técnica em Informática.
+✓ Disponibilidade estimada de 6–8h/dia.
+✓ O projeto não precisa ser focado em TI.
+✓ A plataforma terá posicionamento próprio, não será cópia direta.
+
+==================================================
+19. DECISÕES PENDENTES
+==================================================
+
+!!! PRIORIDADE ALTA !!!
+
+1. Validação do público inicial.
+2. Validação do diferencial definitivo.
+3. Posicionamento final.
+4. Modelo de comissão definitivo.
+5. Gateway de pagamento.
+6. Política de saque.
+7. Política de reembolso.
+8. Categorias permitidas.
+9. Produtos proibidos.
+10. Estratégia de aquisição dos primeiros produtores.
+
+==================================================
+19.5. NOVAS DECISÕES — V4
+==================================================
+
+[NOVAS DECISÕES — V4]
+
+NOME: TZ Store
+SLOGAN DE TRABALHO: Conecte. Venda. Desfrute.
+DIREÇÃO DE MARCA: TZ como marca principal, com possibilidade de produtos/serviços derivados como TZ Checkout, TZ Affiliates, TZ Members, TZ Analytics e TZ API.
+DIFERENCIAL DE TRABALHO: simplicidade + marketplace + afiliados, com marketplace orientado a oportunidades para afiliados.
+
+==================================================
+19.6. DEFINIÇÃO ESTRATÉGICA — V5
+==================================================
+
+[NOVAS DEFINIÇÕES DE TRABALHO — V5]
+
+PÚBLICO INICIAL PROPOSTO:
+Produtores digitais iniciantes e intermediários, especialmente criadores de cursos, ebooks, mentorias, comunidades, templates e outros produtos digitais entregáveis automaticamente.
+
+SEGUNDO PÚBLICO PRIORITÁRIO:
+Afiliados iniciantes e intermediários que procuram produtos para divulgar e gerar comissão.
+
+PROBLEMA CENTRAL:
+“Tenho um produto digital, mas não quero precisar montar uma operação inteira para conseguir vender.”
+
+POSICIONAMENTO DE TRABALHO:
+“A plataforma para criar, vender e escalar produtos digitais através de produtores e afiliados.”
+
+DIFERENCIAL DE TRABALHO:
+Marketplace de oportunidades para afiliados, combinando descoberta de produtos, dados de desempenho, comissão, materiais de divulgação e ferramentas de gestão em uma experiência simples.
+
+DIFERENCIAL PARA PRODUTORES:
+Possibilidade de criar campanhas para recrutamento de afiliados, disponibilizar materiais de divulgação, acompanhar desempenho e administrar comissões.
+
+DIFERENCIAL PARA AFILIADOS:
+Possibilidade de descobrir, comparar e avaliar oportunidades de afiliação com base em informações como comissão, preço, categoria, desempenho e reputação, quando houver dados suficientes.
+
+SISTEMA DE REPUTAÇÃO — HIPÓTESE FUTURA:
+Poderá existir um Product Score e um Affiliate Score baseados em métricas de desempenho, reputação, reembolsos, chargebacks e histórico. Não faz parte da primeira versão obrigatória.
+
+MODELO DE COMISSÃO:
+Ainda não definido. 8,99% + R$2,49 por venda permanece apenas como hipótese financeira para simulação e não como preço oficial.
+
+PRINCÍPIO DO MVP:
+Construir somente o necessário para permitir o fluxo completo: produtor cadastra produto → afiliado encontra e divulga → comprador compra → pagamento é confirmado → venda e comissão são registradas → entrega é liberada.
+
+==================================================
+==================================================
+19.7. NOVA DECISÃO ESTRATÉGICA — V6
+==================================================
+
+MODELO DE EXPERIÊNCIA: HÍBRIDO
+
+A TZ Store adotará uma experiência híbrida, combinando marketplace e plataforma de gestão.
+
+PRINCÍPIO:
+A TZ Store não será posicionada apenas como checkout. A experiência deverá conectar produtores, afiliados e compradores dentro do mesmo ecossistema.
+
+FRENTE DO PRODUTOR:
+- Criar e publicar produtos digitais.
+- Gerenciar vendas, clientes e ofertas.
+- Criar e administrar campanhas para afiliados.
+- Disponibilizar materiais de divulgação.
+- Acompanhar desempenho e comissões.
+
+FRENTE DO AFILIADO:
+- Encontrar produtos e oportunidades de afiliação.
+- Visualizar informações relevantes do produto e da comissão.
+- Avaliar oportunidades antes de divulgar.
+- Gerar/gerenciar links e acompanhar vendas e comissões.
+
+FRENTE DO COMPRADOR:
+- Descobrir/comprar produtos.
+- Utilizar checkout simples e seguro.
+- Receber acesso ao produto digital.
+- Acessar área de membros quando aplicável.
+
+DIREÇÃO DA HOME/LANDING PAGE:
+A página inicial deverá apresentar claramente os dois principais caminhos: "Quero vender meu produto" e "Quero vender como afiliado", além de comunicar a existência do ecossistema/marketplace.
+
+OBJETIVO DA DECISÃO:
+Criar uma plataforma que conecte oferta e demanda, em vez de ser percebida somente como ferramenta de checkout.
+
+STATUS:
+Decisão de trabalho aprovada para orientar UX/UI, arquitetura funcional e definição do MVP.
+
+==================================================
+20. ONDE PARAMOS
+==================================================
+
+ESTAMOS AQUI:
+
+ETAPA 1 — ESTRATÉGIA DO NEGÓCIO.
+
+NOME DEFINIDO: TZ Store
+SLOGAN DE TRABALHO: Conecte. Venda. Desfrute.
+PÚBLICO INICIAL DE TRABALHO: produtores digitais iniciantes/intermediários + afiliados iniciantes/intermediários.
+DIFERENCIAL DE TRABALHO: marketplace orientado a oportunidades para afiliados.
+POSICIONAMENTO DE TRABALHO: plataforma para criar, vender e escalar produtos digitais através de produtores e afiliados.
+
+Já temos a estrutura conceitual da plataforma.
+
+PRÓXIMA ETAPA:
+
+Escolher:
+1. Público inicial.
+2. Diferencial.
+3. Posicionamento.
+4. Nome.
+5. Modelo de comissão.
+
+Depois disso:
+→ desenhar as telas;
+→ fechar MVP;
+→ definir arquitetura;
+→ iniciar código.
+
+
+
+PONTO EXATO DO PROJETO:
+A estratégia de experiência foi definida como HÍBRIDA. O próximo passo é estruturar a arquitetura de telas e os fluxos UX/UI da TZ Store, contemplando Landing/Home, Marketplace, cadastro/login, dashboard do produtor, dashboard do afiliado, checkout, área do comprador e painel administrativo. Depois disso, fechar o MVP funcional e partir para arquitetura técnica e implementação.
+
+==================================================
+21. HISTÓRICO DE VERSÕES
+==================================================
+
+V1:
+Ideia inicial de marketplace de infoprodutos.
+
+V2:
+Estrutura de produtores, afiliados, clientes, administração e roadmap.
+
+V3:
+Posicionamento, análise inicial de concorrentes, MVP, funcionalidades, métricas, roadmap e decisões pendentes.
+
+V4:
+Nome TZ Store e slogan de trabalho “Conecte. Venda. Desfrute.”, com TZ como marca principal.
+
+V5:
+Avanço da definição estratégica de público inicial, proposta de diferencial e posicionamento da TZ Store.
+
+FIM DA VERSÃO 5
+
+
+V6 — 03/09/2026
+- Definido modelo de experiência HÍBRIDO para a TZ Store.
+- Marketplace + plataforma de gestão passam a coexistir como experiência central.
+- Definidos os caminhos principais de produtor, afiliado e comprador.
+- Próximo passo: arquitetura de telas e fluxos UX/UI.
+
+==================================================
+22. ARQUITETURA DE TELAS E FLUXOS — V7
+==================================================
+
+STATUS:
+Definição de trabalho para orientar UX/UI e o fechamento do MVP.
+
+22.1. ESTRUTURA GERAL DA TZ STORE
+
+A plataforma será organizada em quatro grandes experiências:
+
+A) ÁREA PÚBLICA
+B) ÁREA DO PRODUTOR
+C) ÁREA DO AFILIADO
+D) ÁREA DO COMPRADOR
+
+Além delas, haverá:
+E) CHECKOUT
+F) ÁREA DE MEMBROS
+G) PAINEL ADMINISTRATIVO
+
+A mesma conta poderá futuramente possuir mais de um papel, evitando a criação de contas separadas quando o usuário quiser atuar como produtor e afiliado.
+
+--------------------------------------------------
+22.2. ÁREA PÚBLICA
+--------------------------------------------------
+
+HOME / LANDING PAGE
+Objetivo: explicar rapidamente o ecossistema e direcionar o visitante para seu objetivo.
+
+Blocos principais:
+- Header com logo TZ Store.
+- Acesso a Marketplace.
+- Login.
+- Cadastro.
+- Hero com proposta de valor.
+- CTA "Quero vender meu produto".
+- CTA "Quero vender como afiliado".
+- Entrada para explorar produtos.
+- Explicação resumida de como funciona.
+- Benefícios para produtores.
+- Benefícios para afiliados.
+- Benefícios para compradores.
+- Categorias/produtos em destaque, quando houver dados suficientes.
+- Rodapé institucional.
+
+MARKETPLACE
+Objetivo: ser a vitrine pública de produtos e oportunidades.
+
+Tela de listagem:
+- Busca.
+- Categorias.
+- Filtros.
+- Ordenação.
+- Cards de produtos.
+- Preço.
+- Comissão de afiliado, quando aplicável.
+- Informações resumidas de venda/afiliado, conforme disponibilidade.
+
+TELA DO PRODUTO
+- Nome.
+- Imagem/capa.
+- Descrição.
+- Categoria.
+- Preço.
+- Informações de entrega.
+- Informações para afiliados, quando públicas.
+- CTA de compra.
+- CTA de afiliação, quando disponível e permitido pelo produtor.
+
+CADASTRO / LOGIN
+- Cadastro.
+- Login.
+- Recuperação de acesso.
+- Verificação necessária para operações sensíveis.
+
+--------------------------------------------------
+22.3. ÁREA DO PRODUTOR
+--------------------------------------------------
+
+DASHBOARD DO PRODUTOR
+Objetivo: centralizar operação e visão do negócio.
+
+Navegação inicial proposta:
+- Visão geral.
+- Produtos.
+- Vendas.
+- Clientes.
+- Ofertas/cupons.
+- Afiliados.
+- Campanhas.
+- Materiais de divulgação.
+- Comissões.
+- Relatórios.
+- Configurações.
+
+PRODUTOS
+- Criar produto.
+- Editar produto.
+- Publicar/despublicar.
+- Definir preço.
+- Definir tipo de entrega.
+- Configurar acesso.
+- Visualizar status.
+
+AFILIADOS
+- Ativar/desativar programa de afiliados por produto.
+- Definir comissão.
+- Aprovar/reprovar afiliados quando houver aprovação manual.
+- Visualizar afiliados vinculados.
+- Acompanhar vendas geradas.
+
+CAMPANHAS
+- Criar campanha.
+- Definir produto(s) participantes.
+- Definir regras da campanha.
+- Disponibilizar materiais.
+- Acompanhar desempenho.
+
+MATERIAIS
+- Upload de criativos e materiais.
+- Organização por produto/campanha.
+- Disponibilização para afiliados.
+
+--------------------------------------------------
+22.4. ÁREA DO AFILIADO
+--------------------------------------------------
+
+DASHBOARD DO AFILIADO
+Objetivo: transformar a plataforma em uma central de oportunidades e gestão de divulgação.
+
+Navegação inicial proposta:
+- Visão geral.
+- Marketplace de afiliação.
+- Meus produtos afiliados.
+- Links.
+- Vendas.
+- Comissões.
+- Materiais.
+- Relatórios.
+- Configurações.
+
+MARKETPLACE DE AFILIAÇÃO
+- Descobrir produtos.
+- Filtrar por categoria.
+- Filtrar por comissão.
+- Filtrar por preço.
+- Visualizar informações disponíveis de desempenho.
+- Visualizar regras da afiliação.
+- Solicitar/entrar em programa de afiliados, conforme regra do produto.
+
+PRODUTO AFILIADO
+- Dados do produto.
+- Comissão.
+- Regras.
+- Materiais disponíveis.
+- Link de divulgação.
+- Histórico/desempenho do afiliado.
+
+--------------------------------------------------
+22.5. ÁREA DO COMPRADOR
+--------------------------------------------------
+
+A área do comprador deve ser simples e orientada ao acesso ao que foi comprado.
+
+Navegação inicial proposta:
+- Início.
+- Minhas compras.
+- Produtos/acessos.
+- Dados da conta.
+- Suporte.
+
+MINHAS COMPRAS
+- Histórico de pedidos.
+- Status do pagamento.
+- Acesso aos produtos liberados.
+- Informações da compra.
+
+--------------------------------------------------
+22.6. CHECKOUT
+--------------------------------------------------
+
+O checkout é parte crítica do MVP e deverá reduzir fricção.
+
+Fluxo proposto:
+1. Comprador acessa a página do produto.
+2. Clica em comprar.
+3. Checkout apresenta produto, preço e dados necessários.
+4. Comprador escolhe método de pagamento disponível.
+5. Pedido é criado.
+6. Pagamento é processado.
+7. Sistema recebe confirmação do pagamento.
+8. Pedido muda para pago/aprovado.
+9. Sistema registra a venda.
+10. Se houver afiliado, a comissão é registrada conforme as regras.
+11. Sistema libera a entrega/acesso.
+12. Comprador recebe confirmação e acesso.
+
+STATUS POSSÍVEIS DO PEDIDO:
+- Pendente.
+- Aguardando pagamento.
+- Pago/aprovado.
+- Em análise, quando aplicável.
+- Cancelado.
+- Reembolsado.
+
+A implementação exata dos status dependerá do gateway escolhido.
+
+--------------------------------------------------
+22.7. ÁREA DE MEMBROS
+--------------------------------------------------
+
+A área de membros será utilizada quando o produto exigir consumo contínuo ou organizado.
+
+MVP inicial:
+- Acesso autenticado.
+- Lista de produtos adquiridos.
+- Conteúdo organizado por módulos/aulas ou arquivos, conforme tipo do produto.
+- Controle básico de acesso.
+
+Não é necessário criar uma plataforma de membros extremamente complexa no primeiro MVP.
+
+--------------------------------------------------
+22.8. PAINEL ADMINISTRATIVO
+--------------------------------------------------
+
+Objetivo: permitir operação, moderação, suporte e controle da plataforma.
+
+Navegação inicial proposta:
+- Dashboard geral.
+- Usuários.
+- Produtores.
+- Afiliados.
+- Compradores.
+- Produtos.
+- Pedidos/vendas.
+- Pagamentos.
+- Reembolsos.
+- Comissões.
+- Denúncias/moderação.
+- Logs/auditoria.
+- Configurações.
+
+Funções críticas:
+- Suspender usuários.
+- Moderar produtos.
+- Visualizar pedidos.
+- Acompanhar pagamentos.
+- Consultar reembolsos.
+- Auditar operações sensíveis.
+
+--------------------------------------------------
+22.9. NAVEGAÇÃO E PERMISSÕES
+--------------------------------------------------
+
+VISITANTE:
+- Pode acessar Home.
+- Pode explorar Marketplace.
+- Pode visualizar páginas públicas de produtos.
+- Pode iniciar cadastro/login.
+- Não pode acessar dashboards privados.
+
+COMPRADOR:
+- Pode comprar.
+- Pode visualizar suas compras.
+- Pode acessar produtos liberados.
+- Pode gerenciar sua conta.
+
+AFILIADO:
+- Pode acessar recursos de afiliado.
+- Pode encontrar oportunidades.
+- Pode gerar/gerenciar links.
+- Pode acompanhar vendas e comissões.
+
+PRODUTOR:
+- Pode criar e gerenciar produtos.
+- Pode gerenciar vendas/clientes.
+- Pode administrar afiliados/campanhas.
+- Pode acompanhar desempenho e comissões.
+
+ADMIN:
+- Possui acesso operacional e de moderação conforme permissões administrativas.
+
+REGRA IMPORTANTE:
+Permissões devem ser controladas no backend. Ocultar uma tela no frontend não é considerado mecanismo de segurança.
+
+--------------------------------------------------
+22.10. FLUXO COMPLETO DE UMA VENDA COM AFILIADO
+--------------------------------------------------
+
+PRODUTOR
+↓
+Cria produto
+↓
+Publica produto
+↓
+Ativa afiliação e define regras
+↓
+AFILIADO
+↓
+Encontra produto no marketplace de afiliação
+↓
+Entra no programa / recebe aprovação, conforme regra
+↓
+Gera link
+↓
+Divulga
+↓
+COMPRADOR
+↓
+Acessa link
+↓
+Visualiza produto
+↓
+Realiza compra no checkout
+↓
+PAGAMENTO
+↓
+Gateway confirma pagamento
+↓
+TZ STORE
+↓
+Registra pedido aprovado
+↓
+Identifica origem/afiliado
+↓
+Registra venda
+↓
+Calcula comissão conforme regra vigente
+↓
+Libera produto
+↓
+COMPRADOR recebe acesso
+↓
+PRODUTOR acompanha venda
+↓
+AFILIADO acompanha comissão
+
+Esse é o fluxo central que o MVP precisa conseguir executar de ponta a ponta.
+
+--------------------------------------------------
+22.11. FLUXO DE VENDA SEM AFILIADO
+--------------------------------------------------
+
+PRODUTOR → PUBLICA PRODUTO → COMPRADOR ACESSA → CHECKOUT → PAGAMENTO APROVADO → VENDA REGISTRADA → ENTREGA LIBERADA.
+
+Esse fluxo também deverá existir no MVP.
+
+--------------------------------------------------
+22.12. MVP FUNCIONAL APÓS A ARQUITETURA DE TELAS
+--------------------------------------------------
+
+OBRIGATÓRIO:
+- Cadastro/login.
+- Perfis e permissões básicas.
+- Criação de produto digital.
+- Publicação de produto.
+- Marketplace/listagem pública.
+- Página do produto.
+- Checkout.
+- Criação de pedido.
+- Integração com um gateway de pagamento a ser escolhido.
+- Confirmação de pagamento.
+- Registro da venda.
+- Programa de afiliados básico.
+- Link/rastreamento básico de afiliado.
+- Registro de comissão.
+- Entrega/acesso digital.
+- Área básica do comprador.
+- Dashboard básico do produtor.
+- Dashboard básico do afiliado.
+- Administração/moderação mínima.
+
+FORA DO MVP OU POSTERGADO:
+- Product Score avançado.
+- Affiliate Score avançado.
+- Analytics extremamente avançado.
+- Automação complexa de marketing.
+- Sistema de membros extremamente completo.
+- Recursos financeiros muito avançados.
+- Grande quantidade de integrações.
+
+--------------------------------------------------
+22.13. PRINCÍPIO DE UX/UI
+--------------------------------------------------
+
+A interface deve ser simples o suficiente para um usuário iniciante entender sem treinamento, mas profissional o suficiente para transmitir confiança a quem pretende vender e movimentar dinheiro pela plataforma.
+
+DIRETRIZES DE TRABALHO:
+- Hierarquia visual clara.
+- CTAs objetivos.
+- Pouca fricção no cadastro e compra.
+- Dashboards orientados a ações e indicadores úteis.
+- Marketplace orientado à descoberta e comparação.
+- Linguagem simples.
+- Responsividade desde o início.
+- Segurança e estados de erro/sucesso tratados como parte da experiência.
+
+==================================================
+23. ONDE PARAMOS — V7
+==================================================
+
+A estratégia HÍBRIDA continua definida.
+
+Nesta versão foi definida a arquitetura funcional inicial de telas, perfis, permissões e fluxos principais da TZ Store.
+
+A plataforma passa a ter como estrutura-base:
+- Área pública/Home.
+- Marketplace.
+- Área do produtor.
+- Área do afiliado.
+- Área do comprador.
+- Checkout.
+- Área de membros.
+- Painel administrativo.
+
+O fluxo central do MVP também está definido:
+produtor → produto → afiliado → divulgação → comprador → checkout → pagamento → venda → comissão → entrega.
+
+PRÓXIMO PASSO EXATO:
+1. Transformar esta arquitetura em sitemap/estrutura de navegação.
+2. Definir o wireframe das telas prioritárias.
+3. Definir o conteúdo e componentes de cada tela.
+4. Fechar definitivamente o escopo do MVP.
+5. Só então definir arquitetura técnica, banco de dados, APIs e stack de implementação.
+
+NÃO ESTÁ DEFINIDO AINDA:
+- Gateway de pagamento.
+- Modelo final de comissão.
+- Política de saque.
+- Política de reembolso.
+- Regras finais de aprovação de afiliados.
+- Categorias proibidas.
+- Stack técnica definitiva para esta versão.
+
+==================================================
+24. HISTÓRICO DE VERSÕES — ATUALIZAÇÃO
+==================================================
+
+V7 — 03/09/2026
+- Definida arquitetura funcional inicial da experiência híbrida.
+- Estruturadas as áreas pública, produtor, afiliado, comprador, checkout, membros e administração.
+- Definidas permissões iniciais por perfil.
+- Definido fluxo de venda com e sem afiliado.
+- Fechado o conjunto inicial de funcionalidades obrigatórias e postergadas do MVP.
+- Próximo passo: sitemap, wireframes, componentes e fechamento definitivo do MVP.
+==================================================
+25. SITEMAP E ESTRUTURA DE NAVEGAÇÃO — V8
+==================================================
+
+STATUS:
+Definição de trabalho para transformar a arquitetura funcional em navegação real.
+
+25.1. MAPA GERAL
+
+TZ STORE
+│
+├── ÁREA PÚBLICA
+│   ├── /
+│   ├── /marketplace
+│   ├── /produto/[slug]
+│   ├── /login
+│   └── /cadastro
+│
+├── CHECKOUT
+│   └── /checkout/[slug]
+│
+├── ÁREA DO USUÁRIO
+│   └── /dashboard
+│       ├── /produtos
+│       ├── /produtos/novo
+│       ├── /vendas
+│       ├── /clientes
+│       ├── /ofertas
+│       ├── /afiliados
+│       ├── /campanhas
+│       ├── /materiais
+│       ├── /links
+│       ├── /comissoes
+│       ├── /saques
+│       ├── /relatorios
+│       ├── /compras
+│       ├── /cursos
+│       └── /configuracoes
+│
+└── ADMIN
+    └── /admin
+        ├── /usuarios
+        ├── /produtores
+        ├── /afiliados
+        ├── /compradores
+        ├── /produtos
+        ├── /vendas
+        ├── /pagamentos
+        ├── /reembolsos
+        ├── /comissoes
+        ├── /saques
+        ├── /denuncias
+        ├── /logs
+        └── /configuracoes
+
+
+25.2. REGRA DE NAVEGAÇÃO POR PERFIL
+
+VISITANTE:
+Home → Marketplace → Produto → Cadastro/Login → Checkout.
+
+COMPRADOR:
+Dashboard → Compras → Produto/Acesso → Curso/Arquivo.
+
+PRODUTOR:
+Dashboard → Produtos → Vendas → Clientes → Afiliados → Campanhas → Comissões.
+
+AFILIADO:
+Dashboard → Marketplace de afiliação → Produtos afiliados → Links → Vendas → Comissões.
+
+USUÁRIO MULTIPERFIL:
+Uma única conta poderá alternar entre contextos disponíveis, sem duplicar cadastro.
+
+ADMIN:
+Admin → Operação → Moderação → Financeiro → Auditoria.
+
+
+==================================================
+26. WIREFRAMES — TELAS PRIORITÁRIAS
+==================================================
+
+STATUS:
+Wireframes estruturais. Não representam ainda o design visual definitivo.
+
+26.1. HOME / LANDING
+
+[LOGO TZ STORE]     Marketplace     Entrar     Criar conta
+
+--------------------------------------------------
+TÍTULO PRINCIPAL
+"Transforme seu produto em vendas."
+
+SUBTÍTULO
+Venda seus produtos digitais ou encontre oportunidades
+para vender como afiliado.
+
+[ QUERO VENDER MEU PRODUTO ]
+[ QUERO VENDER COMO AFILIADO ]
+
+[ EXPLORAR MARKETPLACE ]
+--------------------------------------------------
+
+COMO FUNCIONA
+1. Crie ou encontre um produto
+2. Venda ou divulgue
+3. Receba seus resultados
+
+--------------------------------------------------
+PARA PRODUTORES
+• Crie produtos
+• Configure ofertas
+• Encontre afiliados
+• Acompanhe vendas
+
+[ COMEÇAR A VENDER ]
+
+--------------------------------------------------
+PARA AFILIADOS
+• Encontre oportunidades
+• Compare comissões
+• Pegue seu link
+• Acompanhe resultados
+
+[ ENCONTRAR PRODUTOS ]
+
+--------------------------------------------------
+PRODUTOS EM DESTAQUE
+
+[card] [card] [card] [card]
+
+--------------------------------------------------
+RODAPÉ
+Termos | Privacidade | Suporte | Contato
+
+
+26.2. MARKETPLACE PÚBLICO
+
+[LOGO] Marketplace                         [Entrar]
+
+BUSCAR PRODUTO...                          [Buscar]
+
+Categorias:
+Todos | Cursos | Ebooks | Templates | Mentorias | Comunidades
+
+Filtros:
+Preço | Categoria | Tipo | Mais vendidos | Novidades
+
+--------------------------------------------------
+[IMAGEM]
+Produto
+Descrição curta
+R$ XX,XX
+[ VER PRODUTO ]
+--------------------------------------------------
+
+O marketplace deve priorizar descoberta e clareza, evitando excesso
+de informação nos cards.
+
+
+26.3. PÁGINA DO PRODUTO
+
+[← Voltar]
+
+[CAPA DO PRODUTO]        NOME DO PRODUTO
+                         Categoria
+                         Descrição curta
+
+                         R$ XX,XX
+                         [ COMPRAR AGORA ]
+
+--------------------------------------------------
+SOBRE O PRODUTO
+
+Descrição completa.
+
+--------------------------------------------------
+O QUE VOCÊ RECEBE
+
+• Conteúdo digital
+• Acesso
+• Materiais
+
+--------------------------------------------------
+AFILIAÇÃO
+
+Comissão: XX%
+Tipo de afiliação: automática/manual
+
+[ QUERO SER AFILIADO ]
+
+--------------------------------------------------
+DÚVIDAS / INFORMAÇÕES
+
+--------------------------------------------------
+
+
+26.4. CHECKOUT
+
+LOGO TZ STORE
+
+--------------------------------------------------
+SEU PEDIDO
+
+Produto
+Preço
+Desconto, se houver
+Total
+
+--------------------------------------------------
+SEUS DADOS
+
+Nome
+Email
+CPF, quando necessário
+
+--------------------------------------------------
+PAGAMENTO
+
+Método disponível
+Dados necessários
+
+[ FINALIZAR COMPRA ]
+
+--------------------------------------------------
+Compra segura
+Políticas e informações
+--------------------------------------------------
+
+REGRA:
+O checkout não deve disputar atenção com elementos desnecessários.
+A prioridade é concluir a compra.
+
+
+26.5. DASHBOARD DO PRODUTOR
+
+[LOGO] TZ STORE
+
+Visão geral | Produtos | Vendas | Clientes
+Ofertas | Afiliados | Campanhas | Comissões
+Relatórios | Configurações
+
+--------------------------------------------------
+VISÃO GERAL
+
+Vendas aprovadas       R$ XX.XXX
+Pedidos                XXX
+Ticket médio           R$ XXX
+Comissões              R$ XXX
+
+--------------------------------------------------
+VENDAS RECENTES
+
+Produto | Cliente | Valor | Status
+
+--------------------------------------------------
+PRODUTOS
+
+Produto A     Publicado
+Produto B     Rascunho
+
+[ + CRIAR PRODUTO ]
+
+
+26.6. CRIAÇÃO DE PRODUTO
+
+ETAPA 1 — INFORMAÇÕES
+Nome
+Descrição
+Categoria
+Imagem
+
+[Continuar]
+
+ETAPA 2 — PREÇO E OFERTA
+Preço
+Oferta
+Cupom, quando aplicável
+
+[Continuar]
+
+ETAPA 3 — ENTREGA
+Tipo:
+• Arquivo
+• Curso
+• Conteúdo
+• Comunidade, quando suportado
+
+[Continuar]
+
+ETAPA 4 — AFILIADOS
+Ativar afiliação?
+Comissão
+Aprovação automática/manual
+
+[Continuar]
+
+ETAPA 5 — REVISÃO
+Resumo do produto
+
+[ SALVAR RASCUNHO ]
+[ PUBLICAR PRODUTO ]
+
+PRINCÍPIO:
+Criar produto deve ser um fluxo guiado, não um formulário gigante.
+
+
+26.7. DASHBOARD DO AFILIADO
+
+[LOGO] TZ STORE
+
+Visão geral | Encontrar produtos | Meus produtos
+Links | Vendas | Comissões | Materiais | Relatórios
+
+--------------------------------------------------
+RESULTADOS
+
+Vendas                XX
+Comissões             R$ XX.XXX
+Cliques                XXX
+Conversão              X,X%
+
+--------------------------------------------------
+OPORTUNIDADES
+
+[Produto]  Comissão XX%  R$ XX
+[ VER OPORTUNIDADE ]
+
+[Produto]  Comissão XX%  R$ XX
+[ VER OPORTUNIDADE ]
+
+--------------------------------------------------
+DESEMPENHO DOS LINKS
+
+Link | Cliques | Vendas | Comissão
+
+
+26.8. PÁGINA DE OPORTUNIDADE PARA AFILIADO
+
+Produto
+Categoria
+Preço
+Comissão
+Regras da afiliação
+Informações de desempenho, quando disponíveis
+
+--------------------------------------------------
+POR QUE PROMOVER?
+
+Resumo comercial do produto.
+
+--------------------------------------------------
+MATERIAIS
+
+[ Baixar criativo ]
+[ Ver página de vendas ]
+[ Copiar informações ]
+
+--------------------------------------------------
+[ ENTRAR NA AFILIAÇÃO ]
+
+Após aprovação:
+
+[ GERAR MEU LINK ]
+
+
+26.9. ÁREA DO COMPRADOR
+
+[LOGO]
+
+Início | Minhas compras | Conta | Suporte
+
+--------------------------------------------------
+MINHAS COMPRAS
+
+[Produto]
+Comprado em DD/MM/AAAA
+Status: Disponível
+
+[ ACESSAR PRODUTO ]
+
+--------------------------------------------------
+
+A área do comprador deve ser extremamente simples.
+O objetivo principal é permitir que ele encontre e consuma o que comprou.
+
+
+26.10. ÁREA DE MEMBROS
+
+[LOGO]          Nome do produto
+
+Módulos
+├── Aula 1
+├── Aula 2
+├── Aula 3
+└── Materiais
+
+--------------------------------------------------
+TÍTULO DA AULA
+
+[PLAYER / CONTEÚDO]
+
+Descrição
+Materiais
+[ Download ]
+
+[ ← Anterior ]                    [ Próxima → ]
+
+PRINCÍPIO:
+Não competir inicialmente com plataformas especializadas de membros.
+Entregar somente o necessário para consumo do produto.
+
+
+26.11. PAINEL ADMINISTRATIVO
+
+ADMIN
+
+Visão geral | Usuários | Produtos | Vendas
+Pagamentos | Saques | Reembolsos | Comissões
+Denúncias | Logs | Configurações
+
+--------------------------------------------------
+INDICADORES
+
+GMV
+Vendas aprovadas
+Receita TZ
+Reembolsos
+Chargebacks
+Usuários ativos
+
+--------------------------------------------------
+ATENÇÃO
+
+Produtos aguardando moderação
+Saques aguardando análise
+Denúncias abertas
+Pagamentos com problema
+
+--------------------------------------------------
+
+
+==================================================
+27. FLUXOS UX PRIORITÁRIOS
+==================================================
+
+27.1. PRODUTOR — PRIMEIRA VENDA
+
+Cadastro
+↓
+Escolhe "Vender meu produto"
+↓
+Dashboard
+↓
+Criar produto
+↓
+Configura preço e entrega
+↓
+Ativa afiliados (opcional)
+↓
+Publica
+↓
+Produto disponível
+↓
+Compra direta ou venda por afiliado
+↓
+Pagamento aprovado
+↓
+Venda registrada
+↓
+Entrega liberada
+↓
+Produtor acompanha resultado
+
+OBJETIVO UX:
+O produtor deve conseguir chegar de cadastro até produto publicado
+sem precisar entender conceitos técnicos.
+
+
+27.2. AFILIADO — PRIMEIRA VENDA
+
+Cadastro
+↓
+Escolhe "Vender como afiliado"
+↓
+Marketplace de afiliação
+↓
+Filtra oportunidades
+↓
+Abre produto
+↓
+Analisa comissão/regras
+↓
+Entra na afiliação
+↓
+Gera link
+↓
+Divulga
+↓
+Venda
+↓
+Comissão registrada
+↓
+Acompanha resultado
+
+OBJETIVO UX:
+Reduzir o tempo entre entrar na plataforma e encontrar algo
+concreto para promover.
+
+
+27.3. COMPRADOR — COMPRA
+
+Produto
+↓
+Comprar
+↓
+Checkout
+↓
+Dados
+↓
+Pagamento
+↓
+Confirmação
+↓
+Acesso
+
+OBJETIVO UX:
+Poucos passos e máxima clareza.
+
+
+==================================================
+28. COMPONENTES PRINCIPAIS DE INTERFACE
+==================================================
+
+COMPONENTES GLOBAIS:
+- Header.
+- Sidebar.
+- Footer.
+- Botões.
+- Inputs.
+- Selects.
+- Modal.
+- Toast/notificação.
+- Badge/status.
+- Tabela.
+- Paginação.
+- Busca.
+- Filtros.
+- Cards.
+- Empty states.
+- Loading states.
+- Error states.
+- Confirmation dialogs.
+
+COMPONENTES DE MARKETPLACE:
+- ProductCard.
+- CategoryFilter.
+- SearchBar.
+- SortSelect.
+- ProductGallery.
+- AffiliateOpportunityCard.
+
+COMPONENTES DE DASHBOARD:
+- MetricCard.
+- SalesTable.
+- ProductTable.
+- CommissionTable.
+- Chart básico.
+- ActivityList.
+
+COMPONENTES DE CHECKOUT:
+- OrderSummary.
+- CustomerForm.
+- PaymentMethod.
+- CouponInput.
+- PurchaseStatus.
+
+COMPONENTES DE MEMBROS:
+- CourseSidebar.
+- LessonList.
+- ContentViewer.
+- ProgressIndicator.
+
+
+==================================================
+29. FECHAMENTO DO MVP — V8
+==================================================
+
+O MVP será considerado funcional somente quando for possível executar
+os seguintes cenários reais:
+
+CENÁRIO A — VENDA DIRETA
+Produtor cria produto
+→ publica
+→ comprador acessa
+→ checkout
+→ pagamento aprovado
+→ venda registrada
+→ entrega liberada.
+
+CENÁRIO B — VENDA COM AFILIADO
+Produtor cria produto
+→ ativa afiliação
+→ afiliado encontra
+→ afiliado entra no programa
+→ gera link
+→ comprador acessa pelo link
+→ compra
+→ venda atribuída
+→ comissão registrada
+→ entrega liberada.
+
+CENÁRIO C — CONSUMO
+Comprador recebe acesso
+→ entra na área do comprador
+→ acessa produto
+→ consome conteúdo/download.
+
+CENÁRIO D — OPERAÇÃO
+Admin consegue:
+→ visualizar usuários
+→ moderar produto
+→ acompanhar venda
+→ acompanhar pagamento
+→ analisar saque/reembolso
+→ consultar logs.
+
+
+==================================================
+30. O QUE NÃO SERÁ DESENHADO/PROGRAMADO AGORA
+==================================================
+
+Para evitar expansão prematura do projeto:
+
+- App mobile nativo.
+- IA de recomendação.
+- Score avançado.
+- CRM completo.
+- Automação avançada.
+- Funil visual completo.
+- Email marketing próprio.
+- Pixel/analytics extremamente avançado.
+- Marketplace gigantesco.
+- Sistema complexo de gamificação.
+- Sistema financeiro avançado além do necessário para o MVP.
+- Dezenas de gateways.
+- Dezenas de integrações.
+
+Esses itens podem entrar posteriormente após validação.
+
+
+==================================================
+31. PRÓXIMO PASSO TÉCNICO — V8
+==================================================
+
+Depois do sitemap e wireframes, a ordem recomendada será:
+
+1. Definir identidade visual/UI.
+2. Definir stack técnica definitiva.
+3. Definir arquitetura do frontend.
+4. Definir arquitetura do backend.
+5. Modelar banco de dados.
+6. Definir API.
+7. Definir autenticação e permissões.
+8. Definir integração de pagamento.
+9. Criar estrutura inicial do projeto.
+10. Implementar o MVP por fluxo, não por quantidade de telas.
+
+ORDEM DE IMPLEMENTAÇÃO:
+
+FASE 1
+Auth + usuários + permissões.
+
+FASE 2
+Produtos + arquivos + publicação.
+
+FASE 3
+Marketplace + páginas públicas.
+
+FASE 4
+Checkout + pedidos + pagamentos.
+
+FASE 5
+Entrega + área do comprador.
+
+FASE 6
+Afiliados + links + atribuição + comissão.
+
+FASE 7
+Dashboards.
+
+FASE 8
+Administração + moderação.
+
+FASE 9
+Testes + segurança + beta.
+
+
+==================================================
+32. ONDE PARAMOS — V8
+==================================================
+
+A estratégia HÍBRIDA está definida.
+
+A arquitetura funcional foi definida.
+
+O sitemap inicial foi definido.
+
+Os wireframes estruturais das telas prioritárias foram definidos.
+
+Os principais fluxos UX foram definidos.
+
+O MVP funcional foi fechado em torno de quatro cenários:
+1. Venda direta.
+2. Venda com afiliado.
+3. Consumo/entrega.
+4. Operação administrativa.
+
+PRÓXIMO PASSO EXATO:
+
+DEFINIR A IDENTIDADE VISUAL E O SISTEMA DE UI DA TZ STORE.
+
+Depois:
+→ escolher stack técnica definitiva;
+→ arquitetura frontend/backend;
+→ banco de dados;
+→ API;
+→ pagamentos;
+→ implementação.
+
+A partir deste ponto, não devemos começar a programar telas aleatórias.
+A implementação deve seguir os fluxos definidos neste documento.
+==================================================
+34. REQUISITO PERMANENTE — MOBILE / RESPONSIVIDADE
+==================================================
+
+A TZ Store deverá funcionar corretamente em CELULAR, TABLET e DESKTOP.
+
+RESPONSIVIDADE NÃO SERÁ UM AJUSTE POSTERIOR.
+Será requisito de produto desde o primeiro wireframe e desde a primeira implementação.
+
+34.1. PRIORIDADE
+
+A experiência deverá seguir princípio MOBILE-FIRST:
+- projetar considerando primeiro telas pequenas;
+- depois expandir para tablet e desktop;
+- evitar componentes que dependam exclusivamente de mouse;
+- garantir áreas de toque adequadas;
+- manter textos legíveis sem zoom;
+- evitar rolagem horizontal desnecessária.
+
+34.2. ÁREAS QUE DEVEM SER RESPONSIVAS
+
+Obrigatoriamente:
+- Landing/Home;
+- Marketplace;
+- Página de produto;
+- Login;
+- Cadastro;
+- Checkout;
+- Dashboard do produtor;
+- Criação/edição de produto;
+- Área de afiliado;
+- Marketplace de afiliação;
+- Área do comprador;
+- Área de membros;
+- Painel administrativo.
+
+34.3. DIRETRIZES MOBILE
+
+- Navegação adaptada para celular.
+- Sidebar poderá se transformar em menu/drawer.
+- Tabelas deverão possuir versão mobile adequada.
+- Cards deverão reorganizar seu conteúdo.
+- Gráficos deverão se adaptar à largura disponível.
+- Formulários deverão ser confortáveis para toque.
+- CTAs principais deverão permanecer facilmente acessíveis.
+- Checkout deverá ser especialmente otimizado para celular.
+- Upload de arquivos deverá funcionar em dispositivos móveis.
+- Player/conteúdo da área de membros deverá se adaptar ao viewport.
+- Modais deverão respeitar a tela disponível.
+- Estados de loading, erro e sucesso deverão funcionar em telas pequenas.
+- Nenhuma funcionalidade crítica poderá existir apenas na versão desktop.
+
+34.4. TESTES RESPONSIVOS
+
+Antes de considerar uma funcionalidade concluída, ela deverá ser validada pelo menos em:
+- celular pequeno;
+- celular moderno de tamanho médio/grande;
+- tablet;
+- desktop.
+
+A implementação deverá considerar diferentes larguras e orientação da tela.
+
+34.5. PRINCÍPIO
+
+"Se funciona no desktop, mas não funciona bem no celular, ainda não está pronto."
+
+==================================================
+35. ONDE PARAMOS — V9
+==================================================
+
+Foi adicionada uma decisão permanente ao projeto:
+
+MOBILE-FIRST / RESPONSIVO = REQUISITO OBRIGATÓRIO.
+
+A TZ Store não será desenvolvida pensando somente em computador.
+Todas as experiências principais deverão funcionar em celular, tablet e desktop.
+
+PRÓXIMO PASSO EXATO:
+Definir a identidade visual e o sistema de UI da TZ Store já considerando
+mobile-first, breakpoints, navegação responsiva, componentes adaptáveis
+e experiência de checkout no celular.
+
+==================================================
+36. HISTÓRICO DE VERSÕES — V9
+==================================================
+
+V9 — 03/09/2026
+- Tornada obrigatória a compatibilidade com celular, tablet e desktop.
+- Definido princípio mobile-first.
+- Adicionadas diretrizes de navegação, formulários, tabelas, checkout,
+  dashboards, área de membros e componentes responsivos.
+- Definida validação em diferentes tamanhos de tela.
+- Próximo passo: identidade visual e sistema de UI com abordagem mobile-first.
+
+==================================================
+FIM DA VERSÃO 9
+==================================================
+
+==================================================
+37. IDENTIDADE VISUAL E SISTEMA DE UI — V10
+==================================================
+
+37.1. DIREÇÃO VISUAL
+
+A TZ Store deverá transmitir tecnologia, confiança, performance e simplicidade.
+A identidade não deverá copiar visualmente plataformas concorrentes.
+
+Direção aprovada de trabalho:
+- visual moderno e premium;
+- base predominantemente escura;
+- alto contraste para informações e CTAs;
+- uso controlado de cor de destaque da marca;
+- interfaces limpas, com pouco ruído visual;
+- sensação de produto SaaS profissional;
+- foco em conversão sem aparência de página excessivamente publicitária.
+
+37.2. PALETA DE CORES — PROPOSTA INICIAL
+
+A paleta abaixo é uma proposta de sistema e poderá ser refinada durante prototipação.
+
+- Background principal: #08090D
+- Surface principal: #101218
+- Surface secundária: #171A22
+- Bordas: #272B36
+- Texto principal: #F5F7FA
+- Texto secundário: #A7ADBA
+- Texto desabilitado: #686F7D
+- Cor de destaque / Brand: #7C5CFF
+- Brand hover: #6947F5
+- Sucesso: #22C55E
+- Atenção: #F59E0B
+- Erro: #EF4444
+- Informação: #3B82F6
+
+A cor de destaque deverá ser usada principalmente para:
+- CTAs principais;
+- links importantes;
+- estados ativos;
+- indicadores de seleção;
+- elementos de marca.
+
+Não utilizar a cor de destaque em excesso.
+
+37.3. TIPOGRAFIA
+
+Proposta inicial:
+- Fonte principal: Inter;
+- títulos com peso 600–700;
+- textos comuns com peso 400–500;
+- números e métricas com peso 600–700;
+- evitar excesso de fontes diferentes.
+
+Hierarquia:
+- Display/Hero: grande e forte;
+- H1: destaque de página;
+- H2/H3: organização de seções;
+- Body: leitura confortável;
+- Caption/Label: informações auxiliares.
+
+37.4. ESPAÇAMENTO E GRID
+
+Base de espaçamento: múltiplos de 4px.
+
+Valores de referência:
+- 4px, 8px, 12px, 16px, 20px, 24px, 32px, 40px, 48px, 64px.
+
+Border radius:
+- controles pequenos: 8px;
+- inputs/botões: 10px;
+- cards: 14px;
+- elementos destacados: 16–20px.
+
+O sistema deverá evitar cantos excessivamente arredondados para preservar aparência SaaS profissional.
+
+37.5. BOTÕES
+
+Primário:
+- fundo na cor Brand;
+- texto de alto contraste;
+- destaque visual claro;
+- estado hover e pressed;
+- estado loading;
+- estado disabled.
+
+Secundário:
+- surface/borda;
+- usado para ações auxiliares.
+
+Ghost:
+- sem fundo permanente;
+- usado para navegação e ações de menor prioridade.
+
+Perigoso:
+- reservado para exclusões e ações destrutivas;
+- sempre exigir contexto claro;
+- confirmação quando houver risco de perda.
+
+Todos os botões precisam possuir área de toque adequada em dispositivos móveis.
+
+37.6. INPUTS E FORMULÁRIOS
+
+- labels sempre identificáveis;
+- placeholders não substituem labels;
+- mensagens de erro próximas ao campo;
+- estados de foco claramente visíveis;
+- suporte a loading;
+- validação sem destruir dados já digitados;
+- inputs confortáveis para toque;
+- teclado mobile adequado ao tipo de dado sempre que possível.
+
+37.7. CARDS
+
+Cards serão usados para:
+- produtos;
+- oportunidades de afiliação;
+- métricas;
+- pedidos;
+- clientes;
+- campanhas;
+- conteúdos.
+
+Padrão:
+- surface elevada em relação ao background;
+- borda sutil;
+- hierarquia clara;
+- informação essencial primeiro;
+- ações secundárias discretas.
+
+37.8. NAVEGAÇÃO RESPONSIVA
+
+Desktop:
+- header público;
+- sidebar nas áreas autenticadas;
+- navegação persistente quando houver espaço suficiente.
+
+Mobile:
+- header compacto;
+- menu/drawer para navegação secundária;
+- CTA principal facilmente acessível;
+- nenhuma informação crítica escondida exclusivamente em hover;
+- navegação por toque.
+
+37.9. MARKETPLACE
+
+A interface do Marketplace deverá priorizar descoberta e comparação.
+
+Cada card de produto poderá apresentar:
+- imagem/capa;
+- nome;
+- categoria;
+- preço;
+- avaliação quando houver dados suficientes;
+- informação de comissão quando exibido para afiliados;
+- CTA;
+- informações resumidas de confiança/reputação quando disponíveis.
+
+Filtros e busca deverão funcionar corretamente no mobile, preferencialmente por drawer/modal adaptado.
+
+37.10. DASHBOARDS
+
+Dashboards não deverão tentar reproduzir desktop integralmente no celular.
+
+No mobile:
+- métricas em cards empilhados ou carrossel controlado;
+- tabelas transformadas em cards quando necessário;
+- gráficos redimensionáveis;
+- filtros reorganizados;
+- ações prioritárias destacadas;
+- navegação secundária em drawer.
+
+37.11. CHECKOUT
+
+O checkout é uma das áreas mais críticas da TZ Store.
+
+Diretrizes:
+- poucos elementos distrativos;
+- resumo do pedido claramente visível;
+- formulário curto e organizado;
+- segurança/confiança comunicada sem poluição visual;
+- CTA de pagamento evidente;
+- excelente experiência mobile;
+- estados de processamento, sucesso e erro claros;
+- recuperação de erro sem obrigar o comprador a refazer tudo.
+
+37.12. ACESSIBILIDADE
+
+O sistema deverá considerar desde o início:
+- contraste adequado;
+- foco visível;
+- navegação por teclado onde aplicável;
+- labels e textos compreensíveis;
+- não depender apenas de cor para comunicar estado;
+- áreas de toque adequadas;
+- mensagens de erro acionáveis.
+
+37.13. BREAKPOINTS — PROPOSTA DE TRABALHO
+
+Os breakpoints são referência inicial e poderão ser refinados durante implementação:
+
+- Mobile pequeno: até 374px;
+- Mobile: 375px–767px;
+- Tablet: 768px–1023px;
+- Desktop: 1024px–1439px;
+- Desktop amplo: 1440px+.
+
+A lógica principal será mobile-first: estilos começam no menor viewport e são expandidos conforme a largura aumenta.
+
+37.14. TEMAS
+
+MVP:
+- tema escuro como experiência visual principal.
+
+Tema claro:
+- não é prioridade para o MVP;
+- poderá ser adicionado futuramente sem alterar a arquitetura dos componentes.
+
+37.15. DESIGN TOKENS
+
+A implementação deverá centralizar tokens de:
+- cores;
+- tipografia;
+- espaçamento;
+- radius;
+- sombras;
+- bordas;
+- breakpoints;
+- estados.
+
+O objetivo é impedir que valores visuais sejam espalhados aleatoriamente pelo código.
+
+37.16. COMPONENTES BASE DO UI KIT
+
+O sistema deverá prever, no mínimo:
+- Button;
+- Input;
+- Select;
+- Checkbox;
+- Radio;
+- Switch;
+- Textarea;
+- Badge;
+- Avatar;
+- Card;
+- Modal/Dialog;
+- Drawer;
+- Dropdown;
+- Tooltip;
+- Tabs;
+- Table/Data list;
+- Pagination;
+- Toast/Notification;
+- Skeleton;
+- Empty State;
+- Error State;
+- Loading State;
+- Confirm Dialog.
+
+37.17. PRINCÍPIO DE CONSISTÊNCIA
+
+Uma mesma ação deverá parecer e funcionar da mesma maneira em toda a plataforma.
+
+Exemplo:
+- criar produto;
+- salvar alterações;
+- cancelar;
+- excluir;
+- filtrar;
+- pesquisar;
+- visualizar detalhes.
+
+A experiência deverá ser previsível para reduzir curva de aprendizado.
+
+37.18. IDENTIDADE COMO REGRA DE PRODUTO
+
+A identidade visual não será apenas decoração.
+Ela deverá reforçar a proposta da TZ Store:
+- conectar;
+- vender;
+- desfrutar;
+- facilitar a operação;
+- transmitir confiança;
+- reduzir fricção.
+
+==================================================
+38. ONDE PARAMOS — V10
+==================================================
+
+A estratégia HÍBRIDA está definida.
+A arquitetura funcional está definida.
+O sitemap inicial está definido.
+Os wireframes estruturais das telas prioritárias estão definidos.
+Os principais fluxos UX estão definidos.
+O MVP funcional está fechado em torno dos cenários de venda direta, venda com afiliado, consumo/entrega e operação administrativa.
+A compatibilidade mobile-first é requisito permanente.
+
+Nesta V10 foi definida a primeira proposta de identidade visual e sistema de UI:
+- direção visual premium, moderna e SaaS;
+- tema escuro como padrão do MVP;
+- paleta inicial;
+- tipografia;
+- escala de espaçamento;
+- componentes base;
+- botões e formulários;
+- cards;
+- navegação responsiva;
+- Marketplace;
+- dashboards;
+- checkout;
+- acessibilidade;
+- breakpoints;
+- design tokens.
+
+PRÓXIMO PASSO EXATO:
+
+1. Escolher a stack técnica definitiva do projeto.
+2. Definir arquitetura frontend e backend.
+3. Definir arquitetura do banco de dados.
+4. Definir entidades e relacionamentos principais.
+5. Definir API e autenticação.
+6. Definir estratégia de pagamentos/gateway.
+7. Só então iniciar a implementação do projeto seguindo o UI System definido.
+
+REGRA PERMANENTE:
+Não começar a programar telas aleatórias.
+A implementação deverá seguir o Documento Mestre, os fluxos aprovados e o sistema de UI definido.
+
+==================================================
+39. HISTÓRICO DE VERSÕES — V10
+==================================================
+
+V10 — 03/09/2026
+- Definida a primeira direção oficial de trabalho para identidade visual da TZ Store.
+- Definido tema escuro como padrão do MVP.
+- Criada paleta de cores inicial.
+- Definida tipografia e hierarquia visual.
+- Definida escala de espaçamento e border radius.
+- Definidos padrões de botões, inputs, cards e navegação.
+- Definida abordagem visual para Marketplace, dashboards e checkout.
+- Reforçada acessibilidade como requisito de UI.
+- Definidos breakpoints iniciais mobile-first.
+- Definidos design tokens e componentes base do UI Kit.
+- Atualizado o ponto exato do projeto.
+- Próximo passo: stack técnica, arquitetura, banco, API e pagamentos.
+
+==================================================
+FIM DA VERSÃO 10
+==================================================
+
+==================================================
+40. STACK TÉCNICA DEFINITIVA DE TRABALHO — V11
+==================================================
+
+STATUS:
+Decisão técnica de trabalho aprovada para iniciar a implementação do MVP.
+
+A stack será escolhida priorizando:
+- velocidade de desenvolvimento;
+- manutenção simples;
+- segurança;
+- escalabilidade gradual;
+- boa experiência mobile;
+- separação clara entre frontend e backend;
+- facilidade para evolução futura da plataforma.
+
+40.1. FRONTEND
+
+- Next.js com App Router.
+- React.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui para componentes de interface.
+- Framer Motion somente onde houver benefício real de UX.
+
+RESPONSABILIDADES:
+- área pública;
+- marketplace;
+- páginas de produto;
+- checkout;
+- dashboards;
+- área do comprador;
+- área de membros;
+- painel administrativo;
+- consumo da API;
+- gerenciamento de estados de interface;
+- experiência responsiva mobile-first.
+
+REGRA:
+O frontend não será responsável por regras críticas de negócio, autorização financeira ou decisões de segurança que precisem ser garantidas no backend.
+
+40.2. BACKEND
+
+- NestJS.
+- TypeScript.
+- API REST versionada.
+- Arquitetura modular por domínio.
+
+MÓDULOS INICIAIS:
+- Auth;
+- Users;
+- Profiles;
+- Products;
+- ProductFiles;
+- Offers;
+- Orders;
+- Payments;
+- Affiliates;
+- AffiliateLinks;
+- Commissions;
+- Customers;
+- Access/Delivery;
+- Members;
+- Admin;
+- Notifications;
+- Webhooks.
+
+40.3. BANCO DE DADOS
+
+- PostgreSQL como banco relacional principal.
+- Prisma ORM.
+
+O banco será a fonte de verdade para:
+- usuários;
+- produtos;
+- pedidos;
+- pagamentos;
+- afiliados;
+- vendas;
+- comissões;
+- acessos;
+- permissões;
+- auditoria.
+
+40.4. CACHE E PROCESSAMENTO ASSÍNCRONO
+
+- Redis.
+
+Uso previsto:
+- cache de dados apropriados;
+- rate limiting;
+- filas/jobs;
+- processamento assíncrono de webhooks;
+- notificações;
+- tarefas que não precisam bloquear a resposta HTTP.
+
+A utilização de Redis não deverá transformar operações simples em sistemas desnecessariamente complexos.
+
+40.5. ARQUIVOS E CONTEÚDO DIGITAL
+
+Os arquivos dos produtos não deverão ficar expostos diretamente no frontend.
+
+Arquitetura proposta:
+- armazenamento compatível com S3;
+- URLs temporárias/presigned URLs quando necessário;
+- controle de autorização antes da liberação;
+- registro de downloads/acessos quando aplicável.
+
+40.6. INFRAESTRUTURA INICIAL
+
+- Docker para padronização do ambiente.
+- Nginx como reverse proxy quando necessário na implantação.
+- GitHub para versionamento.
+- CI/CD deverá ser introduzido de forma simples, sem infraestrutura excessiva para o MVP.
+
+A infraestrutura deverá começar pequena e crescer conforme o uso real.
+
+==================================================
+41. ARQUITETURA GERAL DO SISTEMA — V11
+==================================================
+
+ARQUITETURA BASE:
+
+NAVEGADOR / CELULAR
+        ↓
+NEXT.JS
+        ↓
+API REST
+        ↓
+NESTJS
+        ↓
+┌───────────────────────────────┐
+│ PostgreSQL │ Redis │ Storage │
+└───────────────────────────────┘
+        ↓
+PROVEDOR DE PAGAMENTO
+
+O frontend não acessará diretamente o banco de dados.
+
+O backend será responsável por:
+- autenticação;
+- autorização;
+- regras de negócio;
+- criação e atualização de pedidos;
+- comunicação com o gateway;
+- processamento de webhooks;
+- cálculo de comissão;
+- liberação de acesso;
+- auditoria.
+
+41.1. ORGANIZAÇÃO POR DOMÍNIO
+
+A aplicação backend deverá ser modular.
+
+Exemplo:
+
+src/
+  modules/
+    auth/
+    users/
+    products/
+    orders/
+    payments/
+    affiliates/
+    commissions/
+    delivery/
+    members/
+    admin/
+    notifications/
+    webhooks/
+
+Cada módulo deverá concentrar:
+- controller;
+- service/use cases;
+- DTOs;
+- regras específicas;
+- integração necessária;
+- testes correspondentes.
+
+Não criar um único service gigante contendo toda a regra da plataforma.
+
+41.2. FLUXO DE UMA COMPRA
+
+1. Comprador acessa página do produto.
+2. Frontend solicita informações públicas do produto.
+3. Comprador inicia checkout.
+4. Backend cria pedido pendente.
+5. Backend cria cobrança no provedor.
+6. Comprador realiza pagamento.
+7. Provedor envia confirmação/webhook.
+8. Backend valida e processa o evento de forma idempotente.
+9. Pedido passa para pago/aprovado.
+10. Venda é registrada.
+11. Origem do afiliado é identificada, quando existir.
+12. Comissão é registrada conforme regra vigente.
+13. Acesso ao produto é liberado.
+14. Comprador recebe confirmação.
+15. Dashboard do produtor e afiliado é atualizado.
+
+41.3. REGRA DE IDPOTÊNCIA
+
+Operações críticas relacionadas a pagamento, pedido, comissão e webhook deverão ser idempotentes.
+
+O mesmo evento recebido duas vezes não poderá:
+- criar duas vendas;
+- criar duas comissões;
+- liberar acesso duplicado de forma indevida;
+- gerar efeitos financeiros duplicados.
+
+==================================================
+42. MODELO DE DADOS — V11
+==================================================
+
+42.1. ENTIDADES PRINCIPAIS DO MVP
+
+User
+- id
+- email
+- passwordHash
+- status
+- createdAt
+- updatedAt
+
+Profile
+- id
+- userId
+- name
+- document, quando necessário
+- phone, quando necessário
+- avatarUrl
+
+Role / UserRole
+- definição de permissões e papéis do usuário.
+
+Product
+- id
+- producerId
+- name
+- slug
+- description
+- shortDescription
+- coverUrl
+- category
+- type
+- status
+- publishedAt
+
+ProductFile
+- id
+- productId
+- storageKey
+- fileName
+- mimeType
+- size
+
+Offer
+- id
+- productId
+- name
+- price
+- status
+- startsAt
+- endsAt
+
+AffiliateProgram
+- id
+- productId
+- enabled
+- commissionType
+- commissionValue
+- approvalMode
+- rules
+
+Affiliate
+- id
+- userId
+- status
+
+AffiliateApplication
+- id
+- affiliateId
+- affiliateProgramId
+- status
+
+AffiliateLink
+- id
+- affiliateId
+- productId
+- code
+- status
+
+Order
+- id
+- customerId
+- productId
+- offerId
+- affiliateLinkId, quando aplicável
+- status
+- subtotal
+- discount
+- total
+- currency
+- createdAt
+
+Payment
+- id
+- orderId
+- provider
+- providerPaymentId
+- method
+- amount
+- status
+- paidAt
+
+Sale
+- id
+- orderId
+- producerId
+- affiliateId, quando aplicável
+- amount
+- status
+
+Commission
+- id
+- saleId
+- affiliateId
+- amount
+- status
+- availableAt
+- paidAt
+
+Customer
+- id
+- userId, quando aplicável
+- name
+- email
+- document, quando necessário
+
+Entitlement / Access
+- id
+- userId/customerId
+- productId
+- orderId
+- status
+- grantedAt
+
+Course
+- id
+- productId
+- title
+
+Module
+- id
+- courseId
+- title
+- position
+
+Lesson
+- id
+- moduleId
+- title
+- contentType
+- content
+- position
+
+Download
+- id
+- accessId
+- productFileId
+- createdAt
+
+WebhookEvent
+- id
+- provider
+- externalEventId
+- eventType
+- payload
+- status
+- processedAt
+
+AuditLog
+- id
+- actorUserId
+- action
+- entityType
+- entityId
+- metadata
+- createdAt
+
+Notification
+- id
+- userId
+- type
+- title
+- body
+- readAt
+
+42.2. RELACIONAMENTO CENTRAL
+
+User
+ ├── Profile
+ ├── Roles
+ ├── Products (quando produtor)
+ ├── Affiliate (quando afiliado)
+ └── Customer (quando comprador)
+
+Product
+ ├── Offers
+ ├── ProductFiles
+ ├── AffiliateProgram
+ └── Course, quando aplicável
+
+Order
+ ├── Payment
+ ├── Sale
+ └── Access
+
+Sale
+ └── Commission, quando houver afiliado
+
+Affiliate
+ ├── Applications
+ └── AffiliateLinks
+
+42.3. REGRA FINANCEIRA
+
+Valores monetários deverão ser armazenados em unidade inteira de menor denominação quando aplicável, evitando cálculos financeiros críticos diretamente com ponto flutuante.
+
+A comissão deverá ser registrada como dado financeiro próprio e não recalculada de forma arbitrária a cada consulta.
+
+==================================================
+43. API — V11
+==================================================
+
+A API será REST e versionada.
+
+BASE:
+/api/v1
+
+43.1. AUTH
+
+POST /auth/register
+POST /auth/login
+POST /auth/refresh
+POST /auth/logout
+POST /auth/forgot-password
+POST /auth/reset-password
+GET  /auth/me
+
+43.2. PRODUTOS
+
+GET    /products
+GET    /products/:slug
+POST   /products
+PATCH  /products/:id
+POST   /products/:id/publish
+POST   /products/:id/unpublish
+DELETE /products/:id
+
+43.3. PEDIDOS
+
+POST /orders
+GET  /orders/:id
+GET  /orders/me
+
+43.4. PAGAMENTOS
+
+POST /payments/checkout
+GET  /payments/:id
+POST /webhooks/payments/:provider
+
+43.5. AFILIADOS
+
+GET  /affiliate/opportunities
+POST /affiliate/applications
+GET  /affiliate/products
+POST /affiliate/links
+GET  /affiliate/links
+GET  /affiliate/sales
+GET  /affiliate/commissions
+
+43.6. PRODUTOR
+
+GET  /producer/dashboard
+GET  /producer/sales
+GET  /producer/customers
+GET  /producer/affiliates
+POST /producer/affiliate-programs
+PATCH /producer/affiliate-programs/:id
+
+43.7. COMPRADOR
+
+GET /customer/purchases
+GET /customer/accesses
+GET /customer/products/:id/access
+
+43.8. ADMIN
+
+GET /admin/dashboard
+GET /admin/users
+GET /admin/products
+GET /admin/orders
+GET /admin/payments
+GET /admin/refunds
+GET /admin/commissions
+GET /admin/audit-logs
+
+43.9. PADRÃO DE RESPOSTA
+
+A API deverá possuir respostas previsíveis, erros estruturados e códigos HTTP coerentes.
+
+Não expor:
+- passwordHash;
+- tokens internos;
+- chaves secretas;
+- dados bancários desnecessários;
+- payloads internos de segurança.
+
+==================================================
+44. AUTENTICAÇÃO E AUTORIZAÇÃO — V11
+==================================================
+
+44.1. AUTENTICAÇÃO
+
+Proposta de trabalho:
+- senha armazenada com Argon2id;
+- access token de curta duração;
+- refresh token com rotação;
+- cookies HttpOnly/Secure/SameSite quando apropriado;
+- invalidação de sessões quando necessário;
+- recuperação de senha com token de uso único e expiração.
+
+44.2. AUTORIZAÇÃO
+
+A autorização será aplicada no backend.
+
+Papéis principais:
+- BUYER;
+- AFFILIATE;
+- PRODUCER;
+- ADMIN.
+
+Um usuário poderá possuir mais de um papel.
+
+REGRA:
+Esconder botão ou rota no frontend não é segurança.
+Toda operação protegida deverá ser autorizada no backend.
+
+44.3. OPERAÇÕES SENSÍVEIS
+
+Deverão exigir controles adicionais conforme risco:
+- alteração de dados financeiros;
+- cadastro/alteração de conta de recebimento;
+- solicitação de saque;
+- alteração de credenciais;
+- ações administrativas;
+- alterações críticas de produto/pagamento.
+
+==================================================
+45. PAGAMENTOS E GATEWAY — V11
+==================================================
+
+45.1. ESTRATÉGIA
+
+A TZ Store deverá possuir uma camada de abstração de pagamentos.
+
+O restante do sistema não deverá depender diretamente do SDK específico de um único gateway.
+
+Exemplo conceitual:
+
+PaymentService
+   ↓
+PaymentProvider interface
+   ├── ProviderA
+   └── ProviderB (futuro)
+
+Isso permitirá trocar ou adicionar provedores sem reescrever pedidos, vendas e comissões.
+
+45.2. CANDIDATO INICIAL — PAGAR.ME
+
+Para o cenário de marketplace brasileiro, Pagar.me passa a ser o candidato técnico inicial para validação, porque sua documentação atual possui recursos de Split, recebedores e pedidos com múltiplos recebedores. citeturn0search0turn0search2turn0search14
+
+A documentação também informa que o Split pode definir valores ou percentuais destinados a diferentes recebedores. citeturn0search0
+
+IMPORTANTE:
+Isso é uma decisão técnica de trabalho, não uma contratação ou decisão comercial definitiva.
+Antes do lançamento, deverão ser validados:
+- contrato comercial;
+- disponibilidade do produto para o modelo da TZ Store;
+- onboarding/KYC de produtores;
+- responsabilidade por chargeback;
+- taxas;
+- recebíveis;
+- saques;
+- regras fiscais e regulatórias;
+- suporte;
+- limites operacionais.
+
+Mercado Pago Split e Stripe Connect também permanecem como alternativas de avaliação caso apresentem melhor aderência comercial ou operacional. O Mercado Pago documenta Split para marketplaces no Brasil, enquanto Stripe Connect é voltado a plataformas e marketplaces com onboarding e repasses. citeturn0search3turn0search12turn0search6
+
+45.3. MODELO DE RESPONSABILIDADE
+
+O sistema deverá separar conceitualmente:
+- valor bruto da venda;
+- desconto;
+- taxa do gateway;
+- receita da TZ Store;
+- valor do produtor;
+- comissão do afiliado;
+- reembolso;
+- chargeback;
+- saldo disponível;
+- saldo pendente.
+
+Nenhum desses valores deverá ser tratado apenas como um campo genérico de "saldo".
+
+45.4. WEBHOOKS
+
+Webhooks serão tratados como fonte de confirmação de eventos do provedor quando aplicável.
+
+Fluxo:
+recebe evento
+→ valida autenticidade
+→ registra evento bruto
+→ verifica idempotência
+→ processa
+→ atualiza domínio
+→ registra resultado
+
+Nunca liberar produto apenas porque o frontend informou que o pagamento terminou.
+
+==================================================
+46. ARQUITETURA DE COMISSÕES E AFILIADOS — V11
+==================================================
+
+A atribuição de afiliado deverá acontecer antes da confirmação financeira final, mas a comissão só será efetivada após a confirmação de pagamento conforme as regras do produto.
+
+FLUXO:
+
+Link do afiliado
+↓
+Identificação da origem
+↓
+Checkout
+↓
+Pedido registra referência do afiliado
+↓
+Pagamento aprovado
+↓
+Sale criada
+↓
+Commission criada
+↓
+Comissão fica pendente
+↓
+Após período/regra de disponibilidade
+↓
+Comissão disponível
+
+O prazo de disponibilidade dependerá da política financeira definitiva da plataforma.
+
+A comissão não deverá ser considerada automaticamente disponível no instante da criação do pedido.
+
+==================================================
+47. ARQUITETURA DE ENTREGA DIGITAL — V11
+==================================================
+
+A entrega dependerá do tipo de produto.
+
+ARQUIVO:
+- pagamento aprovado;
+- Access criado;
+- usuário autorizado;
+- URL temporária gerada;
+- download permitido.
+
+CURSO:
+- pagamento aprovado;
+- enrollment/access criado;
+- usuário acessa área de membros;
+- aulas são liberadas conforme regras.
+
+CONTEÚDO:
+- acesso autenticado;
+- conteúdo exibido somente para usuário autorizado.
+
+REGRA:
+Arquivos protegidos não deverão ser disponibilizados por URLs públicas permanentes quando isso permitir acesso sem autorização.
+
+==================================================
+48. ESTRUTURA INICIAL DO REPOSITÓRIO — V11
+==================================================
+
+Estratégia inicial recomendada: monorepo.
+
+apps/
+  web/       → Next.js
+  api/       → NestJS
+
+packages/
+  ui/        → componentes compartilhados
+  config/    → configurações compartilhadas
+  types/     → tipos compartilhados quando realmente necessário
+
+infra/
+  docker/
+  nginx/
+
+prisma/
+  schema.prisma
+  migrations/
+
+O compartilhamento de código deverá ser controlado para evitar acoplamento excessivo entre frontend e backend.
+
+==================================================
+49. PADRÕES DE DESENVOLVIMENTO — V11
+==================================================
+
+REGRAS:
+- TypeScript em todo o código de aplicação.
+- ESLint.
+- Prettier.
+- validação de entrada no backend;
+- DTOs explícitos;
+- tratamento centralizado de erros;
+- logs estruturados;
+- testes unitários para regras críticas;
+- testes de integração para fluxos importantes;
+- testes E2E para os cenários principais do MVP;
+- migrations versionadas;
+- variáveis secretas fora do repositório;
+- commits organizados;
+- Pull Requests quando houver colaboração.
+
+Não utilizar arquitetura excessivamente abstrata antes de existir necessidade real.
+
+==================================================
+50. ORDEM DE IMPLEMENTAÇÃO TÉCNICA — V11
+==================================================
+
+FASE 0 — FUNDAÇÃO
+- monorepo;
+- TypeScript;
+- lint/format;
+- Docker local;
+- variáveis de ambiente;
+- CI básico.
+
+FASE 1 — BANCO E AUTH
+- PostgreSQL;
+- Prisma;
+- User/Profile/Role;
+- cadastro;
+- login;
+- sessão;
+- permissões.
+
+FASE 2 — PRODUTOS
+- Product;
+- ProductFile;
+- Offer;
+- upload;
+- criação;
+- edição;
+- publicação.
+
+FASE 3 — MARKETPLACE
+- listagem;
+- busca;
+- filtros;
+- página pública;
+- SEO básico.
+
+FASE 4 — CHECKOUT E PEDIDOS
+- Order;
+- Customer;
+- checkout;
+- criação de pedido;
+- integração inicial com gateway em ambiente de teste;
+- webhooks.
+
+FASE 5 — PAGAMENTO E ENTREGA
+- confirmação;
+- Sale;
+- Access;
+- download;
+- área do comprador.
+
+FASE 6 — AFILIADOS
+- Affiliate;
+- programa;
+- aplicação;
+- link;
+- atribuição;
+- comissão.
+
+FASE 7 — DASHBOARDS
+- produtor;
+- afiliado;
+- comprador.
+
+FASE 8 — ADMIN
+- usuários;
+- produtos;
+- pedidos;
+- pagamentos;
+- moderação;
+- auditoria.
+
+FASE 9 — SEGURANÇA E BETA
+- testes;
+- rate limiting;
+- revisão de permissões;
+- testes de webhook;
+- testes financeiros;
+- testes responsivos;
+- beta fechado.
+
+==================================================
+51. CRITÉRIOS DE PRONTO DO MVP TÉCNICO — V11
+==================================================
+
+O MVP técnico não será considerado pronto apenas porque as telas funcionam.
+
+DEVE SER POSSÍVEL:
+
+1. Criar conta.
+2. Fazer login.
+3. Criar produto.
+4. Publicar produto.
+5. Encontrar produto no marketplace.
+6. Comprar produto.
+7. Processar pagamento em ambiente validado.
+8. Receber confirmação do pagamento.
+9. Registrar venda.
+10. Liberar acesso.
+11. Entrar como afiliado.
+12. Gerar link.
+13. Atribuir venda ao afiliado.
+14. Registrar comissão.
+15. Consultar resultado no dashboard.
+16. Administrador moderar/consultar a operação.
+17. Reprocessar webhook sem duplicar efeitos financeiros.
+18. Executar os fluxos principais em celular, tablet e desktop.
+
+==================================================
+52. DECISÕES TÉCNICAS PENDENTES — V11
+==================================================
+
+Mesmo com a stack definida, permanecem decisões que dependem de validação prática/comercial:
+
+1. Gateway contratado definitivamente.
+2. Taxas definitivas da TZ Store.
+3. Política de saques.
+4. Prazo de disponibilidade das comissões.
+5. Política de reembolso.
+6. Política de chargeback.
+7. Regras jurídicas/fiscais da operação.
+8. Provedor definitivo de storage.
+9. Infraestrutura definitiva de produção.
+10. Provedor de email/transacional.
+
+Esses itens não devem ser inventados durante a implementação.
+
+==================================================
+53. ONDE PARAMOS — V11
+==================================================
+
+A estratégia de negócio está definida em modelo HÍBRIDO.
+A arquitetura funcional, sitemap, wireframes, MVP e identidade/UI estão definidos.
+A compatibilidade mobile-first continua sendo requisito permanente.
+
+Nesta V11 foi definida a arquitetura técnica de trabalho:
+- Next.js + React + TypeScript no frontend;
+- NestJS + TypeScript no backend;
+- PostgreSQL + Prisma;
+- Redis;
+- storage S3-compatible;
+- Docker;
+- Nginx quando necessário;
+- GitHub;
+- API REST versionada;
+- autenticação e autorização no backend;
+- arquitetura modular por domínio;
+- modelo de dados inicial;
+- estratégia de webhooks idempotentes;
+- camada de abstração de pagamentos;
+- Pagar.me como candidato inicial para validação do cenário de marketplace brasileiro, sem contratação definitiva;
+- ordem técnica de implementação;
+- critérios de pronto do MVP.
+
+PRÓXIMO PASSO EXATO:
+
+1. Criar a estrutura real do monorepo.
+2. Configurar Next.js + TypeScript + Tailwind + UI Kit.
+3. Configurar NestJS + TypeScript + API REST.
+4. Configurar PostgreSQL + Prisma.
+5. Criar o primeiro schema/migration.
+6. Implementar Auth + User + Profile + Role.
+7. Criar a fundação de testes, lint e ambiente Docker.
+
+REGRA PERMANENTE:
+A partir da V11, a implementação deve começar pela fundação técnica e pelo primeiro fluxo vertical do MVP, e não por páginas isoladas.
+
+==================================================
+54. HISTÓRICO DE VERSÕES — V11
+==================================================
+
+V11 — 03/09/2026
+- Definida a stack técnica de trabalho.
+- Definida arquitetura frontend/backend.
+- Definido PostgreSQL + Prisma.
+- Definido uso de Redis.
+- Definido storage S3-compatible para arquivos.
+- Definida arquitetura modular por domínio.
+- Definido modelo inicial de dados.
+- Definida API REST versionada.
+- Definida estratégia de autenticação e autorização.
+- Definida camada de abstração de pagamentos.
+- Avaliado o cenário de marketplace/split e definido Pagar.me como candidato técnico inicial, sujeito a validação comercial, contratual e regulatória. citeturn0search0turn0search9
+- Definida estratégia de webhooks idempotentes.
+- Definida arquitetura de comissão e entrega.
+- Definida estrutura inicial do monorepo.
+- Definida ordem de implementação técnica.
+- Definidos critérios objetivos para considerar o MVP técnico pronto.
+- Atualizado o ponto exato do projeto.
+
+==================================================
+FIM DA VERSÃO 11
+==================================================
+
+==================================================
+48. IMPLEMENTAÇÃO DA FUNDAÇÃO TÉCNICA — V12
+==================================================
+
+STATUS:
+Fundação inicial do projeto criada para iniciar a implementação real do MVP.
+
+48.1. ESTRUTURA DO MONOREPO
+
+TZ STORE
+├── apps/
+│   ├── web/          Aplicação Next.js
+│   └── api/          API NestJS
+├── packages/
+│   ├── ui/           Componentes compartilhados
+│   └── config/       Configurações compartilhadas
+├── prisma/           Schema e evolução do banco
+├── infra/             Infraestrutura/deploy
+├── docker-compose.yml
+├── package.json
+├── pnpm-workspace.yaml
+└── .env.example
+
+48.2. FRONTEND INICIAL
+
+A aplicação web foi criada com:
+- Next.js;
+- React;
+- TypeScript;
+- CSS base orientado pelos tokens visuais definidos na V10;
+- estrutura preparada para evolução para Tailwind/shadcn UI;
+- experiência inicial mobile-first.
+
+A primeira página implementada é a Landing/Home mínima, com os dois caminhos estratégicos:
+- Quero vender meu produto;
+- Quero vender como afiliado.
+
+Também existe acesso conceitual ao Marketplace e criação de conta.
+
+48.3. BACKEND INICIAL
+
+A API foi criada com NestJS e possui:
+- prefixo global `/api/v1`;
+- CORS habilitado para desenvolvimento;
+- ValidationPipe global preparado para validação de DTOs;
+- módulo de health check;
+- módulo inicial de Products;
+- estrutura modular preparada para expansão por domínio.
+
+O health check inicial responde:
+GET /api/v1/health
+
+48.4. BANCO DE DADOS INICIAL
+
+Foi criado o primeiro schema Prisma/PostgreSQL contendo as entidades centrais do MVP:
+- User;
+- Profile;
+- Product;
+- ProductFile;
+- Offer;
+- Affiliate;
+- AffiliateProgram;
+- AffiliateApplication;
+- AffiliateLink;
+- Customer;
+- Order;
+- Payment;
+- Sale;
+- Commission;
+- Access;
+- Course;
+- Module;
+- Lesson;
+- WebhookEvent;
+- AuditLog;
+- Notification.
+
+O schema deverá continuar evoluindo por migrations versionadas.
+
+48.5. INFRAESTRUTURA LOCAL
+
+Foi criado Docker Compose inicial com:
+- PostgreSQL;
+- Redis.
+
+Variáveis principais foram documentadas em `.env.example`.
+
+48.6. PRIMEIRO OBJETIVO DE EXECUÇÃO
+
+A primeira meta técnica passa a ser conseguir executar localmente:
+
+1. subir PostgreSQL e Redis;
+2. instalar dependências;
+3. gerar o Prisma Client;
+4. executar migration inicial;
+5. iniciar API;
+6. validar health check;
+7. iniciar frontend;
+8. validar Home responsiva;
+9. conectar frontend à API;
+10. começar Auth.
+
+48.7. PRINCÍPIO DE IMPLEMENTAÇÃO
+
+A implementação continuará sendo orientada pelos fluxos do MVP e não por quantidade de telas.
+
+A ordem será:
+
+FUNDAÇÃO
+↓
+AUTH + USUÁRIOS + PERMISSÕES
+↓
+PRODUTOS + ARQUIVOS + OFERTAS
+↓
+MARKETPLACE
+↓
+CHECKOUT + PEDIDOS
+↓
+PAGAMENTOS + WEBHOOKS
+↓
+ENTREGA + ACESSO
+↓
+AFILIADOS + ATRIBUIÇÃO + COMISSÕES
+↓
+DASHBOARDS
+↓
+ADMIN
+↓
+TESTES + SEGURANÇA + BETA
+
+48.8. REFERÊNCIAS TÉCNICAS
+
+A arquitetura modular do backend segue a organização por módulos recomendada pelo NestJS, mantendo capacidades relacionadas encapsuladas em módulos próprios. citeturn0search0turn0search1
+
+O frontend utiliza Next.js como framework React para a aplicação web. citeturn0search12
+
+O banco será evoluído por migrations versionadas, permitindo que alterações de schema sejam reproduzíveis e revisáveis. citeturn0search13
+
+48.9. ARQUIVO ENTREGUE
+
+Foi gerado o pacote inicial:
+`tz-store-v12-foundation.zip`
+
+O pacote contém a fundação executável do projeto, mas ainda não representa o MVP completo.
+
+==================================================
+49. ONDE PARAMOS — V12
+==================================================
+
+A TZ Store saiu da fase exclusivamente documental e entrou na fase de implementação.
+
+Já estão definidos:
+- estratégia híbrida;
+- arquitetura funcional;
+- sitemap;
+- wireframes;
+- fluxos UX;
+- MVP;
+- identidade visual/UI;
+- requisito mobile-first;
+- stack técnica;
+- arquitetura frontend/backend;
+- modelo inicial de dados;
+- API inicial;
+- autenticação como próxima fase;
+- estratégia inicial de pagamentos;
+- fundação do monorepo;
+- Docker Compose inicial;
+- schema Prisma inicial;
+- Home inicial;
+- health check da API.
+
+PRÓXIMO PASSO EXATO:
+
+IMPLEMENTAR AUTH + USUÁRIOS + PERMISSÕES.
+
+Objetivos imediatos:
+1. criar registro de usuário;
+2. login;
+3. hash de senha;
+4. sessão/token seguro;
+5. refresh/revogação;
+6. `GET /auth/me`;
+7. papéis BUYER/AFFILIATE/PRODUCER/ADMIN;
+8. guards de autorização no backend;
+9. proteção das rotas privadas;
+10. testes básicos do fluxo de autenticação.
+
+REGRA:
+Nenhum dashboard privado deverá ser considerado pronto antes de a autorização real estar implementada no backend.
+
+==================================================
+50. HISTÓRICO DE VERSÕES — V12
+==================================================
+
+V12 — 03/09/2026
+- Iniciada a implementação real da TZ Store.
+- Criado monorepo inicial.
+- Criada aplicação web Next.js.
+- Criada API NestJS com prefixo `/api/v1`.
+- Criado health check.
+- Criado módulo inicial de Products.
+- Criado schema Prisma/PostgreSQL com entidades centrais do MVP.
+- Criado Docker Compose com PostgreSQL e Redis.
+- Criada configuração `.env.example`.
+- Criada Landing/Home inicial mobile-first.
+- Definido próximo fluxo técnico: Auth + usuários + permissões.
+
+==================================================
+FIM DA VERSÃO 12
+==================================================
+
+==================================================
+51. IMPLEMENTAÇÃO DE AUTH + USUÁRIOS + PERMISSÕES — V13
+==================================================
+
+A fundação técnica avançou para o primeiro fluxo de identidade e autorização real da plataforma.
+
+51.1. AUTENTICAÇÃO
+- Registro: `POST /api/v1/auth/register`.
+- Login: `POST /api/v1/auth/login`.
+- Sessão atual: `GET /api/v1/auth/me`.
+- Renovação: `POST /api/v1/auth/refresh`.
+- Logout/revogação: `POST /api/v1/auth/logout`.
+- Access token em JWT com expiração configurável por ambiente.
+- Refresh token aleatório, armazenado apenas como hash SHA-256 no banco.
+- Refresh token rotativo: ao renovar, a sessão anterior é revogada e uma nova é criada.
+- Refresh token enviado em cookie HttpOnly, com `Secure` em produção e `SameSite=Lax`.
+- Senhas protegidas com Argon2id; senha em texto puro nunca é persistida.
+
+A implementação segue o padrão de autenticação JWT/guards suportado pelo NestJS, com segredo fora do código em ambiente de produção. citeturn0search0
+
+51.2. USUÁRIO
+O modelo `User` recebeu:
+- `roles UserRole[]`;
+- papel padrão `BUYER` no cadastro;
+- relação com `RefreshSession`.
+
+Papéis disponíveis:
+- `BUYER`
+- `AFFILIATE`
+- `PRODUCER`
+- `ADMIN`
+
+Um usuário pode possuir múltiplos papéis.
+
+51.3. AUTORIZAÇÃO
+- `JwtAuthGuard` global protege as rotas por padrão.
+- Decorator `@Public()` libera explicitamente endpoints públicos.
+- `RolesGuard` global verifica papéis quando uma rota usa `@Roles(...)`.
+- Ausência de autenticação: `401 Unauthorized`.
+- Autenticação válida sem permissão suficiente: `403 Forbidden`.
+
+REGRA PERMANENTE:
+Nenhuma área privada será considerada pronta apenas pela existência da tela. O backend precisa validar autenticação e autorização.
+
+51.4. ENDPOINTS PÚBLICOS
+- `POST /api/v1/auth/register`
+- `POST /api/v1/auth/login`
+- `POST /api/v1/auth/refresh`
+
+51.5. ENDPOINTS PROTEGIDOS
+- `GET /api/v1/auth/me`
+- `POST /api/v1/auth/logout`
+- Qualquer novo endpoint privado, salvo declaração explícita com `@Public()`.
+
+51.6. SEGURANÇA DE SESSÃO
+O refresh token não é retornado ao frontend em JSON. Ele é colocado em cookie HttpOnly. O access token é retornado para uso nas requisições autenticadas.
+
+Variáveis:
+- `JWT_ACCESS_SECRET`
+- `JWT_ACCESS_EXPIRES_IN`
+
+O segredo padrão presente no código serve apenas como fallback de desenvolvimento e deve ser substituído em qualquer ambiente real.
+
+51.7. SESSÕES NO BANCO
+Nova entidade `RefreshSession`:
+- `id`
+- `userId`
+- `tokenHash`
+- `expiresAt`
+- `revokedAt`
+- `createdAt`
+
+Índice por usuário/revogação e unicidade do hash do token.
+
+51.8. TESTES DEFINIDOS
+Foi criado `apps/api/AUTH_TESTS.md` com o roteiro mínimo para validar:
+- cadastro;
+- login;
+- proteção de `/auth/me`;
+- refresh rotativo;
+- logout;
+- credencial inválida;
+- e-mail duplicado;
+- usuário suspenso;
+- autorização por papel.
+
+A execução automática dos testes ainda depende da instalação das dependências e da subida do PostgreSQL; essa execução não foi declarada como concluída nesta versão.
+
+51.9. DECISÃO TÉCNICA SOBRE TRANSAÇÕES
+Operações futuras que alterarem múltiplos registros de negócio em conjunto deverão usar transações do Prisma para garantir atomicidade; o princípio é especialmente importante para venda, pagamento, comissão e concessão de acesso. citeturn0search1turn0search4
+
+==================================================
+52. ONDE PARAMOS — V13
+==================================================
+
+A TZ Store agora possui:
+- estratégia híbrida;
+- arquitetura funcional;
+- sitemap;
+- wireframes;
+- fluxos UX;
+- MVP;
+- identidade visual/UI;
+- mobile-first;
+- stack técnica;
+- arquitetura frontend/backend;
+- modelo inicial de dados;
+- API inicial;
+- Docker Compose;
+- Home inicial;
+- health check;
+- autenticação de usuário;
+- hash de senha com Argon2id;
+- JWT de acesso;
+- refresh token rotativo e revogável;
+- cookie HttpOnly para refresh;
+- `/auth/me`;
+- papéis de usuário;
+- guards globais de autenticação e autorização;
+- roteiro de testes de Auth.
+
+PRÓXIMO PASSO EXATO:
+
+IMPLEMENTAR O PRIMEIRO FLUXO VERTICAL DE NEGÓCIO: PRODUTOR → PRODUTO → OFERTA.
+
+Ordem:
+1. completar o `PrismaService` compartilhado da API;
+2. migration do schema atualizado;
+3. endpoints de perfil do produtor;
+4. criação/edição de produto;
+5. upload/registro de arquivos digitais;
+6. publicação do produto;
+7. criação de oferta/preço;
+8. proteção por papel `PRODUCER`;
+9. integração da tela inicial com a API;
+10. testes do fluxo completo de criação/publicação.
+
+Somente depois disso avançar para afiliados, checkout e pagamento.
+
+==================================================
+53. HISTÓRICO DE VERSÕES — V13
+==================================================
+
+V13 — 03/09/2026
+- Implementado módulo de Auth.
+- Implementado cadastro.
+- Implementado login.
+- Implementado JWT.
+- Implementado refresh token rotativo.
+- Implementada revogação de sessão.
+- Implementado cookie HttpOnly para refresh.
+- Implementado `GET /auth/me`.
+- Implementados papéis BUYER/AFFILIATE/PRODUCER/ADMIN.
+- Implementados guards globais de autenticação e autorização.
+- Adicionada entidade `RefreshSession`.
+- Senhas passaram a usar Argon2id.
+- Adicionado roteiro de testes `AUTH_TESTS.md`.
+- Atualizado `.env.example` com segredo/expiração JWT.
+- Definido próximo fluxo vertical: Produtor → Produto → Oferta.
+
+
+==================================================
+54. IMPLEMENTAÇÃO DO PRIMEIRO FLUXO VERTICAL DE NEGÓCIO — V14
+==================================================
+
+A TZ Store avançou da autenticação para o primeiro fluxo comercial do produtor:
+
+PRODUTOR → PRODUTO → ARQUIVO → OFERTA → PUBLICAÇÃO
+
+54.1. FUNDAÇÃO DE BANCO
+- Criado `PrismaService` compartilhado e `DatabaseModule` global.
+- Guards, Auth, Users, Products e Offers passam a usar o serviço Prisma compartilhado.
+- O modelo `Offer` recebeu `createdAt` e `updatedAt` para histórico operacional básico.
+- O armazenamento monetário continua em unidades menores de moeda (centavos), evitando float para preço.
+
+54.2. PRODUTOS
+Endpoints implementados:
+- `GET /api/v1/products` — catálogo público, somente produtos publicados.
+- `GET /api/v1/products/mine` — produtos do produtor autenticado.
+- `GET /api/v1/products/:id` — detalhe privado do próprio produto.
+- `POST /api/v1/products` — criação de produto.
+- `PATCH /api/v1/products/:id` — edição e publicação.
+- `POST /api/v1/products/:id/archive` — arquivamento.
+
+Regras:
+- criação/edição exige `PRODUCER` ou `ADMIN`;
+- slug é único;
+- publicação define `publishedAt`;
+- produtor não consegue editar produto pertencente a outro produtor;
+- ADMIN pode operar produtos de outros usuários.
+
+54.3. OFERTAS
+Endpoints:
+- `GET /api/v1/products/:productId/offers`;
+- `POST /api/v1/products/:productId/offers`;
+- `PATCH /api/v1/products/:productId/offers/:id`.
+
+Regras:
+- oferta pertence a um produto;
+- apenas proprietário do produto ou ADMIN pode gerenciar;
+- preço é recebido em centavos;
+- intervalo `startsAt`/`endsAt` é validado;
+- status inicial é `ACTIVE`.
+
+54.4. ARQUIVOS DIGITAIS
+Foi criado o endpoint:
+- `POST /api/v1/products/:id/files`.
+
+Nesta versão ele registra os metadados do arquivo (`storageKey`, nome, MIME e tamanho) depois que o objeto já estiver no storage.
+
+O upload binário real para S3-compatible storage fica explicitamente separado para a etapa de infraestrutura de arquivos, evitando acoplar o domínio de produto a um fornecedor de storage.
+
+54.5. ATIVAÇÃO DO PAPEL DE PRODUTOR
+Foi criado:
+- `POST /api/v1/users/me/producer`.
+
+O endpoint adiciona `PRODUCER` ao usuário autenticado sem remover papéis existentes.
+
+Após a alteração de papel, o cliente deve renovar a sessão/login para obter um access token contendo o novo papel.
+
+54.6. WEB — PRIMEIRA ÁREA DO PRODUTOR
+Criada a rota:
+- `/producer`
+
+Ela permite testar manualmente o fluxo de criação de produto + oferta usando o access token da API e exibe os produtos do produtor.
+
+Também foram criadas rotas iniciais de navegação:
+- `/marketplace`
+- `/affiliate`
+- `/register`
+
+Essas páginas ainda são placeholders e não representam a implementação final do marketplace/afiliados.
+
+54.7. SEGURANÇA E AUTORIZAÇÃO
+O controle de acesso continua baseado em guards do NestJS e `@Roles(...)`. A separação entre autenticação e autorização é mantida: autenticação identifica o usuário e autorização decide se ele pode operar o recurso. citeturn0search2
+
+A regra de ownership é aplicada também no service, não apenas na rota. Isso evita depender exclusivamente da existência do papel `PRODUCER` para proteger objetos individuais.
+
+54.8. CONSULTAS RELACIONADAS
+As consultas de produtos retornam ofertas e contagens quando necessário usando relações do Prisma, mantendo a leitura do agregado em uma operação tipada. citeturn0search0
+
+54.9. ESTADO DE VALIDAÇÃO
+A instalação completa das dependências não foi concluída no ambiente desta versão; portanto, build, typecheck, geração do Prisma Client, migration e execução dos testes não são declarados como concluídos.
+
+==================================================
+55. ONDE PARAMOS — V14
+==================================================
+
+A TZ Store possui agora:
+- estratégia híbrida;
+- arquitetura funcional;
+- sitemap e wireframes;
+- UX/UI e requisito mobile-first;
+- stack técnica;
+- monorepo inicial;
+- PostgreSQL + Prisma;
+- Redis + Docker Compose;
+- Home inicial;
+- autenticação JWT;
+- refresh token rotativo;
+- sessões revogáveis;
+- roles BUYER/AFFILIATE/PRODUCER/ADMIN;
+- guards globais;
+- `PrismaService` compartilhado;
+- criação/edição/arquivamento de produtos;
+- publicação de produtos;
+- gestão de ofertas;
+- registro de arquivos digitais;
+- área inicial do produtor;
+- endpoints básicos públicos e privados.
+
+PRÓXIMO PASSO EXATO:
+
+IMPLEMENTAR STORAGE REAL + FLUXO COMPLETO DO PRODUTO.
+
+Ordem recomendada:
+1. conectar storage S3-compatible;
+2. upload assinado/presigned quando aplicável;
+3. vincular arquivo ao produto;
+4. tela final de criação de produto;
+5. página pública do produto;
+6. configuração de programa de afiliados;
+7. catálogo real do marketplace;
+8. somente depois iniciar o checkout.
+
+REGRA:
+Não avançar para pagamento antes de o produto poder ser criado, publicado, visualizado e ter sua entrega digital representada corretamente.
+
+==================================================
+56. HISTÓRICO DE VERSÕES — V14
+==================================================
+
+V14 — 03/09/2026
+- Criado PrismaService compartilhado.
+- Criado DatabaseModule global.
+- Implementado CRUD inicial de produtos.
+- Implementadas regras de ownership do produtor.
+- Implementada publicação/arquivamento.
+- Implementado CRUD inicial de ofertas.
+- Adicionada validação de datas das ofertas.
+- Preços tratados em centavos.
+- Implementado registro de metadados de arquivos digitais.
+- Criado endpoint para adicionar role PRODUCER.
+- Criada primeira tela `/producer`.
+- Criados placeholders de marketplace, afiliado e cadastro.
+- Atualizado roteiro de testes para o fluxo Produto → Oferta.
+- Próximo passo definido: storage real + fluxo completo do produto.
+
+==================================================
+FIM DA VERSÃO 14
+==================================================

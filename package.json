@@ -1,0 +1,19 @@
+{
+  "name": "tz-store",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.15.0",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @tz/web --filter @tz/api dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "pnpm --filter @tz/api prisma:generate",
+    "db:migrate": "pnpm --filter @tz/api prisma:migrate"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.5",
+    "prettier": "latest",
+    "typescript": "5.9.3"
+  }
+}

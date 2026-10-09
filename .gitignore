@@ -1,0 +1,38 @@
+node_modules
+.next
+dist
+.env
+.env.*
+!.env.example
+coverage
+*.log
+
+# Backups e auditorias locais
+backup-web-*/
+_tz-audit-*/
+
+# Dependencias e arquivos gerados
+node_modules/
+.next/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Backups locais
+*.backup*
+*.before-*
+*.current-backup
+backup-web-*/
+_tz-audit-*/
+
+# Arquivos de upload e dados locais
+apps/api/storage/
+
+# Diagnosticos e testes locais
+apps/api/typecheck-errors.txt
+teste-produto.txt
+
+# Schemas Prisma de recuperacao
+prisma/schema.corrompido.pre-recuperacao.prisma
+prisma/schema.recovered.prisma
+prisma/schema.recovery.prisma

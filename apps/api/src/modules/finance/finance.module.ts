@@ -1,0 +1,1 @@
+import { Module } from '@nestjs/common'; import { FinanceController } from './finance.controller'; import { PaymentsModule } from '../payments/payments.module'; import { DatabaseModule } from '../../database/database.module'; @Module({imports:[PaymentsModule,DatabaseModule],controllers:[FinanceController]}) export class FinanceModule {}

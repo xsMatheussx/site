@@ -1,0 +1,120 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+
+    <linearGradient id="metal" x1="18" y1="12" x2="100" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.28" stop-color="#DCE5ED"/>
+      <stop offset="0.52" stop-color="#8CB6D8"/>
+      <stop offset="0.78" stop-color="#5FA8FF"/>
+      <stop offset="1" stop-color="#315F91"/>
+    </linearGradient>
+
+    <linearGradient id="dark" x1="20" y1="18" x2="102" y2="102" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1F2A35"/>
+      <stop offset="0.5" stop-color="#10171E"/>
+      <stop offset="1" stop-color="#080D12"/>
+    </linearGradient>
+
+    <linearGradient id="blue" x1="20" y1="95" x2="102" y2="25" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3E7EC0"/>
+      <stop offset="0.5" stop-color="#6AB4FF"/>
+      <stop offset="1" stop-color="#B4DAFF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="7" stdDeviation="7" flood-opacity="0.38"/>
+    </filter>
+
+  </defs>
+
+  <!-- halo -->
+  <circle
+    cx="60"
+    cy="60"
+    r="49"
+    stroke="#5FA8FF"
+    stroke-opacity="0.18"
+    stroke-width="2"
+  />
+
+  <circle
+    cx="60"
+    cy="60"
+    r="43"
+    stroke="#8BC8FF"
+    stroke-opacity="0.16"
+    stroke-width="1"
+  />
+
+  <!-- main dark badge -->
+  <path
+    d="M60 10
+       L103 35
+       L103 85
+       L60 110
+       L17 85
+       L17 35
+       Z"
+    fill="url(#dark)"
+    stroke="rgba(255,255,255,0.18)"
+    filter="url(#shadow)"
+  />
+
+  <!-- T -->
+  <path
+    d="M29 34
+       H69
+       L62 47
+       H52
+       L43 82
+       H29
+       L39 47
+       H23
+       Z"
+    fill="url(#metal)"
+  />
+
+  <!-- Z -->
+  <path
+    d="M61 38
+       H94
+       L89 50
+       L72 73
+       H86
+       L81 84
+       H46
+       L51 72
+       L68 49
+       H56
+       Z"
+    fill="url(#blue)"
+    filter="url(#glow)"
+  />
+
+  <!-- central highlight -->
+  <path
+    d="M32 32 H76"
+    stroke="#FFFFFF"
+    stroke-opacity="0.28"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+
+  <!-- small blue accent -->
+  <circle
+    cx="91"
+    cy="30"
+    r="3"
+    fill="#71B9FF"
+    filter="url(#glow)"
+  />
+
+</svg>
